@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis Network | Layouts | Hierarchical Layout Overlap Avoidance</title>
+
+    <style type="text/css">
+      html,
+      body,
+      #mynetwork {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #mynetwork {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        right: 0%;
+        min-height: 100vh;
+        border-right: 1px solid lightgray;
+        background: white;
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="https://visjs.github.io/vis-network/dist/vis-network.min.js"
+    ></script>
+  </head>
+
+  <body onload="draw();">
+    <div id="mynetwork"></div>
+    <script type="text/javascript">
+      var nodes = [
+        { id: 22, label: 'fact 22\naaaaaa aaaaaaa aaaaa aaaa' },
+        { id: 3, label: 'fact 3\naaaaaa aaaaaaa aaaaa aaaa' },
+        { id: 4, label: 'fact 4\naaaaaa aaaaaaa aaaaa aaaa' },
+        { id: 5, label: 'fact 5\naaaaaa aaaaaaa aaaaa aaaa' },
+        { id: 6, label: 'fact 6\naaaaaa aaaaaaa aaaaa aaaa' },
+        { id: 9, label: 'fact 9\naaaaaa aaaaaaa aaaaa aaaa' },
+        { id: 10, label: 'fact 10\naaaaaa aaaaaaa aaaaa aaaa' },
+      ]
+      var edges = [
+        { from: 22, to: 3 },
+        { from: 3, to: 4 },
+        { from: 4, to: 5 },
+        { from: 4, to: 6 },
+        { from: 4, to: 9 },
+        { from: 5, to: 10 },
+        { from: 6, to: 10 },
+        { from: 9, to: 10 },
+      ]
+      var network = null
+
+      function draw() {
+        // clean up old network
+        if (network != null) {
+          network.destroy()
+          network = null
+        }
+
+        // create a network
+        var container = document.getElementById('mynetwork')
+        var data = { nodes, edges }
+        var options = {
+          layout: {
+            hierarchical: {
+              direction: 'UD',
+              sortMethod: 'directed',
+            },
+          },
+          physics: {
+            hierarchicalRepulsion: {
+              avoidOverlap: 1,
+            },
+          },
+        }
+        network = new vis.Network(container, data, options)
+
+        // add event listeners
+        network.on('select', function (params) {
+          document.getElementById('selection').innerText =
+            'Selection: ' + params.nodes
+        })
+      }
+    </script>
+  </body>
+</html>
