@@ -247,7 +247,7 @@ export default {
       const query = `PREFIX ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       SELECT * WHERE {
-        ?s ?v ?ao . ?ao ex:hasLemma/ex:referencesLemma ?lemma; a ?type .
+        ?s ?v ?ao . ?ao ex:hasLemma ?lemma; a ?type .
         FILTER (${filter})
         SERVICE <https://dydra.com/i2k/lemmabank/sparql> {
           ?lemma rdfs:label ?label .

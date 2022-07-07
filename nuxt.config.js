@@ -19,7 +19,7 @@ const basePath = baseUrl + baseDir
 env.top = basePath + 'img/ogp/home.jpg'
 env.siteName = 'Roman DB'
 
-env.endpoint = 'https://dydra.com/junjun7613/romanfactoid_v3/sparql'
+env.endpoint = "https://dydra.com/junogawa/romanfactoid/sparql"// 'https://dydra.com/junjun7613/romanfactoid_v3/sparql'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target

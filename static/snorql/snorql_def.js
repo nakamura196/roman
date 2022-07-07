@@ -5,7 +5,7 @@ var Snorqldef = {
 	//snorqlの基本設定を上書きするための変数定義
 	vars: {
 		//snorqlで使用するエンドポイントURI: the endpoint URI used by snorql.if not set, default ep is s/snorql/sparql/ of current.
-		_endpoint: "https://dydra.com/junjun7613/romanfactoid_v3/sparql",
+		_endpoint: "https://dydra.com/junogawa/romanfactoid/sparql",
 		//URL to be set on #powerdby <a> element of HTML. Also used for home.uri unless explicitly specified
 		_poweredByLink: "https://jpsearch.go.jp/",
 		//anchor text for the above element. Also used for home.label unless explicitly specified
