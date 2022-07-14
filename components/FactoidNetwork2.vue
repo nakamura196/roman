@@ -69,13 +69,48 @@ export default {
     },
   },
   async mounted() {
+    const query = `
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
+    SELECT * WHERE {
+      ?s a/rdfs:subClassOf* ex:Factoid;
+        ex:description ?desc . 
+      ?s ?p ?ref . 
+      ?ref a/rdfs:subClassOf* ex:EntityReference;
+        ex:referencesEntity ?ref_referencesEntity;
+        ex:sourceDescription ?ref_sourceDescription . 
+      optional { ?ref ex:referencesEntityInContext ?ref_referencesEntityInContext } 
+      optional { 
+        {
+          ?s ?v ?o . 
+        }
+        UNION
+        {
+          ?o ?v ?s . 
+        }
+        ?o a/rdfs:subClassOf* ex:Factoid .
+      }
+    }`
+
+    const endpoint = process.env.endpoint
+
+    const url = `${endpoint}?query=${encodeURIComponent(query)}`
+
+    const { data } = await this.$axios.get(url)
+    console.log({data})
+
+    // 2022-07-14
+    // ここまで
+  },
+  async mounted2() {
     const query = `PREFIX ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
         SELECT * WHERE {
           ?s ?v ?o; ex:description ?desc_s . 
           OPTIONAL {
             ?s ?related_so ?s_o .
             {
-              ?s_o ex:referencesEntityInContext ?entityInContext_s; ex:referencesEntity ?referencesEntity_s .
+              ?s_o ex:referencesEntityInContext ?entityInContext_s; 
+              ex:referencesEntity ?referencesEntity_s .
             }
             UNION
             {

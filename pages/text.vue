@@ -121,7 +121,7 @@ export default {
     },
   },
   async mounted() {
-    const res = await axios.get(this.baseUrl + '/xml/BG_1_TEI.xml')
+    const res = await axios.get(process.env.tei_url)
 
     const parser = new window.DOMParser()
     const xmlData = parser.parseFromString(res.data, 'text/xml')
@@ -142,6 +142,101 @@ export default {
       wids.push(id)
     }
 
+    console.log("wids", wids[0])
+
+    const query4factoids = `
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    prefix ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
+    select * where {
+      ?s a/rdfs:subClassOf* ex:Factoid;
+            a ?type;
+            ex:from ?from;
+            ex:to ?to;
+            ex:description ?description;
+            ?p ?ref . 
+      ?ref a/rdfs:subClassOf* ex:EntityReference;
+            a ?ref_type;
+            ex:referencesEntity ?ref_referencesEntity;
+            ex:sourceDescription ?ref_sourceDescription . 
+      optional { ?ref ex:referencesEntityInContext ?ref_referencesEntityInContext } 
+    }
+    `
+
+    const endpoint = process.env.endpoint
+
+    const url = `${endpoint}?query=${encodeURIComponent(query4factoids)}`
+
+    const { data } = await this.$axios.get(url)
+
+    console.log("検索結果", data.length)
+
+    const factoids = {}
+    for (const obj of data) {
+      const factoidUri = obj.s
+      if(!factoids[factoidUri]) {
+        factoids[factoidUri] = obj
+        factoids[factoidUri].refs = []
+      }
+      factoids[factoidUri].refs.push(obj)
+    }
+
+    const metadata = {}
+    const entityAttributes = {}
+
+    for(const factoidUri in factoids){
+      const factoid = factoids[factoidUri]
+      const spanId = factoidUri // span.getAttribute('xml:id')
+      const type = factoid.type.split("#")[1]
+
+      const from = this.$utils.getIdFromUri(factoid.from)
+      const to = this.$utils.getIdFromUri(factoid.to)
+
+      const indexFrom = wids.indexOf(from)
+      const indexTo = wids.indexOf(to)
+
+      const note = factoid.description
+
+      for (let index = indexFrom; index <= indexTo; index++) {
+        const id = wids[index]
+        if (!metadata[id]) {
+          metadata[id] = []
+        }
+        metadata[id].push({
+          id: spanId,
+          type,
+          note,
+        })
+      }
+
+      for(const ref of factoid.refs){
+        /*
+        if (!name.getAttribute('target')) {
+          continue
+        }
+        */
+        // const refs = name.querySelectorAll('ref')
+        // for (const ref of refs) {
+          /*
+          if (ref.getAttribute('ana') === 'referencesEntityInContext') {
+            const correspId = name.getAttribute('target').replace('#', '')
+            const referencesEntityInContextUri = ref.getAttribute('target')
+            entityAttributes[correspId] = referencesEntityInContextUri
+          }
+          */
+
+         if(ref.ref_referencesEntityInContext){
+          const correspId = this.$utils.getIdFromUri(ref.ref_sourceDescription)
+          const referencesEntityInContextUri = ref.ref_referencesEntityInContext
+          entityAttributes[correspId] = referencesEntityInContextUri
+         }
+
+        // }
+      }
+
+      // break
+    }
+
+    /*
     // span毎に処理を加える
     const spans = xmlData.querySelector('spanGrp').querySelectorAll('span')
 
@@ -189,6 +284,10 @@ export default {
         }
       }
     }
+
+    */
+
+    console.log({metadata, entityAttributes})
 
     this.wordAttributes = metadata
     this.entityAttributes = entityAttributes

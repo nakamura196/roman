@@ -184,13 +184,17 @@ export default class TEIElements extends Vue {
 
   getTypeColor(type: any) {
     let color = null
-    if (type === 'Contact') {
+    if (type === 'ContactFactoid') {
       color = '#FFEE58' // yellow lighten-1
-    } else if (type === 'FamilialRelationship') {
+    } else if (type === 'FamilialRelationshipFactoid') {
       color = '#42A5F5' // blue lighten-1
-    } else if (type === 'SocialRelationship') {
+    } else if (type === 'SocialRelationshipFactoid') {
       color = '#66BB6A' // green lighten-1
-    } else {
+    } else if (type === 'ActionFactoid') {
+      color = '#BDBDBD' // grey lighten-1
+    } else if (type === 'SituationFactoid') {
+      color = 'red' // grey lighten-1
+    }else {
       color = '#BDBDBD' // grey lighten-1
     }
     return color
