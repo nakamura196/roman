@@ -133,7 +133,13 @@ export default {
           // const localReferencesEntityType = referencesEntityType.split("#")[1]
           let color = 'gray'
           switch (referencesEntityType) {
+            /*
             case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Location':
+              // 式の結果が value1 に一致する場合に実行する文
+              color = '#98fb98'
+              break
+              */
+            case 'https://pleiades.stoa.org/places/vocab#Place':
               // 式の結果が value1 に一致する場合に実行する文
               color = '#98fb98'
               break

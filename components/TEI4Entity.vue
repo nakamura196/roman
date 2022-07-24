@@ -1,7 +1,7 @@
 <template>
   <span
     :id="element.attributes['xml:id']"
-    :style="`color: ${color}; cursor: pointer; ${isHightlighted}`"
+    :style="`color: ${color}; cursor: pointer; ${isHightlighted} font-weight: bold`"
     @dblclick="clickEntity(element)"
   >
     <template v-for="(e, key) in element.elements">
@@ -25,11 +25,15 @@ export default class TEI4Entity extends Vue {
 
     switch (name) {
       case 'persName':
-        return 'red'
-      case 'orgName':
-        return 'green'
-      case 'placeName':
         return 'blue'
+      case 'orgName':
+        return 'red'
+      case 'placeName':
+        return 'green'
+      case 'objectName':
+        return 'purple'
+      case 'date':
+        return 'orange'
       default:
         return ''
     }

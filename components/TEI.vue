@@ -69,6 +69,12 @@
     <template v-else-if="element.name === 'placeName'">
       <TEI4Entity :element="element"></TEI4Entity>
     </template>
+    <template v-else-if="element.name === 'objectName'">
+      <TEI4Entity :element="element"></TEI4Entity>
+    </template>
+    <template v-else-if="element.name === 'date'">
+      <TEI4Entity :element="element"></TEI4Entity>
+    </template>
     <template v-else-if="element.name === 'milestone'">
       <template v-if="element.attributes.unit === 'chapter'">
         <h3 class="mt-10">Chapter. {{ element.attributes.n }}</h3>
