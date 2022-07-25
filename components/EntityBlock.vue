@@ -12,11 +12,11 @@
             <td>{{ item.description }}</td>
           </tr>
           <tr>
-            <td>開始 Factoid</td>
+            <td>開始 Event</td>
             <td>{{ item.eventSinceDescription }}</td>
           </tr>
           <tr>
-            <td>終了 Factoid</td>
+            <td>終了 Event</td>
             <td>{{ item.eventUntilDescription }}</td>
           </tr>
         </tbody>
