@@ -13,6 +13,8 @@
           />
           -->
           <!-- v-if="selectedFactoidIdOnText" -->
+
+          <!--factoidのIDは、/を含めない形にする必要がある-->
           <FactoidBlock2
             :id="selectedFactoidIdOnText"
           />
@@ -103,7 +105,9 @@ export default {
   },
   watch: {
     selectedFactoidIdOnText(val) {
-      this.scroll(val)
+      const id = this.$utils.getIdFromUri(val)
+      this.scroll(id)
+      console.log(id)
     },
 
     selectedEntityIdOnText(val) {
@@ -144,6 +148,7 @@ export default {
 
     console.log("wids", wids[0])
 
+/*
     const query4factoids = `
     prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     prefix ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
@@ -159,6 +164,20 @@ export default {
             ex:referencesEntity ?ref_referencesEntity;
             ex:sourceDescription ?ref_sourceDescription . 
       optional { ?ref ex:referencesEntityInContext ?ref_referencesEntityInContext } 
+    }
+    `
+*/
+
+    const query4factoids = `
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    prefix ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
+    select * where {
+      ?s a/rdfs:subClassOf* ex:Factoid;
+            a ?type;
+            ex:from ?from;
+            ex:to ?to;
+            ex:description ?description;
+            ?p ?ref . 
     }
     `
 
@@ -305,12 +324,14 @@ export default {
   },
   methods: {
     scroll(id) {
+      console.log(id)
       if (!id) {
         return
       }
       try {
         const scrollTo = scroller()
         scrollTo('#' + id, 500, {
+        //scrollTo(id, 500, {
           offset: -100,
           container: '#textDiv',
           y: true,

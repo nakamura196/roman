@@ -1,5 +1,6 @@
 <template>
   <div v-if="nodes.length > 0" class="mb-5">
+    {{selectedFactoidIdOnText}}
     <network
       ref="network"
       class="mt-5"
@@ -562,6 +563,7 @@ export default {
     neighbourhoodHighlightByHand(params) {
       this.neighbourhoodHighlight(params.nodes)
       this.onNodeSelected(params)
+      console.log(params)
     },
     neighbourhoodHighlight(selectNodes) {
       const allNodes = JSON.parse(JSON.stringify(this.nodesMap))
@@ -746,6 +748,7 @@ export default {
     // クリックした時の処理
     onNodeSelected(value) {
       const nodes = value.nodes
+      console.log(this.nodesMap)
 
       if (nodes.length > 0) {
         const uri = nodes[0]
@@ -762,7 +765,9 @@ export default {
             })
           )
           */
-          this.selectedFactoidIdOnText = this.$utils.getIdFromUri(node.id)
+          //this.selectedFactoidIdOnText = this.$utils.getIdFromUri(node.id)
+          const id = node.id
+          this.selectedFactoidIdOnText = id
         } else {
           if (!node.context) {
             // alert('contextがありません。')
@@ -778,7 +783,8 @@ export default {
             })
           )
           */
-          this.selectedEntityIdOnText = this.$utils.getIdFromUri(node.context)
+          //this.selectedEntityIdOnText = this.$utils.getIdFromUri(node.context)
+          this.selectedEntityIdOnText = node.context
         }
       }
     },
