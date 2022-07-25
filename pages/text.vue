@@ -18,9 +18,15 @@
           <FactoidBlock2
             :id="selectedFactoidIdOnText"
           />
+          <!--
           <EntityBlock
             v-if="selectedEntityIdOnText"
             :id="$utils.getIdFromUri(selectedEntityIdOnText)"
+          />
+          -->
+          <EntityBlock
+            v-if="selectedEntityIdOnText"
+            :id="selectedEntityIdOnText"
           />
         </v-col>
       </v-row>
@@ -178,6 +184,7 @@ export default {
             ex:to ?to;
             ex:description ?description;
             ?p ?ref . 
+            optional {?ref ex:sourceDescription ?ref_sourceDescription; ex:referencesEntityInContext ?ref_referencesEntityInContext}
     }
     `
 

@@ -72,7 +72,7 @@ export default {
         select distinct * where {
             ?s ex:eventSince ?eventSince; ex:eventUntil ?eventUntil;
               ex:contextualAspectOf ?entity .
-            filter (?s = <${uri}> ) .
+            filter (?s = <${id}> ) .
             ?entity ex:name ?name; rdf:type ?typeOfEntity .
             ?eventSince ex:description ?eventSinceDescription .
             ?eventUntil ex:description ?eventUntilDescription .
@@ -83,7 +83,11 @@ export default {
         `${url}?query=${encodeURIComponent(query4Entity)}`
       )
 
+      console.log(data)
+
       const item = data[0]
+
+      console.log(item)
 
       this.item = item
     },

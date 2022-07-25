@@ -78,13 +78,16 @@ export default class TEI4Entity extends Vue {
   clickEntity(element: any) {
     // factoidは空にする必要ない
     // this.selectedFactoidIdOnText = ''
-    
+    console.log("clicked")
     this.isRedraw = true
     if (element.attributes) {
       const id = element.attributes['xml:id'] // referenceId
+      console.log(id)
       this.selectedReferenceIdOnText = id
 
+      console.log(this.entityAttributes)
       const entityInContextUri = this.entityAttributes[id]
+      console.log(entityInContextUri)
       this.selectedEntityIdOnText = entityInContextUri
     }
   }

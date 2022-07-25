@@ -353,7 +353,7 @@ export default {
             } else if (
               // Location
               [
-                'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Location',
+                'https://pleiades.stoa.org/places/vocab#Place',
               ].includes(typeOfEntity1And2)
             ) {
               color = '#98fb98' // 'green'
