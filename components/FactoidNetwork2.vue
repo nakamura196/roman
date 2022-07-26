@@ -1,6 +1,6 @@
 <template>
   <div v-if="nodes.length > 0" class="mb-5">
-    {{selectedFactoidIdOnText}}
+    {{ selectedFactoidIdOnText }}
     <network
       ref="network"
       class="mt-5"
@@ -12,7 +12,17 @@
     >
     </network>
     <div class="mt-4">
-      <v-switch v-model="isLemma" :label="`Lemma`"></v-switch>
+      <v-row>
+        <v-col>
+          <v-switch v-model="isLemma" :label="`Lemma`"></v-switch>
+        </v-col>
+        <v-col>
+          <v-switch
+            v-model="showFactoidRelation"
+            :label="`Factoid Relation`"
+          ></v-switch>
+        </v-col>
+      </v-row>
     </div>
   </div>
 </template>
@@ -36,6 +46,7 @@ export default {
   data() {
     return {
       isLemma: false,
+      showFactoidRelation: false,
       nodes: [],
       edges: [],
       nodesMap: {},
@@ -55,10 +66,13 @@ export default {
       set(value) {
         this.$store.commit('setSelectedFactoidIdOnText', value)
       },
-    }
+    },
   },
   watch: {
     isLemma() {
+      this.drawNetwork()
+    },
+    showFactoidRelation() {
       this.drawNetwork()
     },
     /*
@@ -77,7 +91,7 @@ export default {
       const id = this.selectedFactoidIdOnText
       // console.log("!!! watch 2")
       const network = this.$refs.network
-      if(!network){
+      if (!network) {
         return
       }
       network.selectNodes([id])
@@ -102,13 +116,12 @@ export default {
       optional { ?ref ex:referencesEntityInContext ?referencesEntityInContext } 
       optional { 
         {
-          ?s ?v ?o . ?o a ?typeOfO .
+          ?s ?v ?o . ?o a ?typeOfO . ?o a/rdfs:subClassOf* ex:Factoid .
         }
         UNION
         {
-          ?o ?v ?s . ?o a ?typeOfS .
+          ?o ?v ?s . ?o a ?typeOfS . ?o a/rdfs:subClassOf* ex:Factoid .
         }
-        ?o a/rdfs:subClassOf* ex:Factoid .
       }
     }`
 
@@ -117,116 +130,88 @@ export default {
     const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
     const { data } = await this.$axios.get(url)
-    console.log({data})
+    console.log({ data })
 
     let nodesMap = {}
     let edgesMap = {}
 
     for (const obj of data) {
-      if(obj.er === "https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#EntityReference"){
+      if (
+        obj.er ===
+        'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#EntityReference'
+      ) {
         continue
       }
-      
-        const node = obj.s
-        // factoid
-        if (!nodesMap[node]) {
-          nodesMap[node] = {
-            id: node,
-            label: obj.desc,
-            shape: 'dot',
-            color: 'orange',
-            shadow: true,
-            original_color: 'orange',
-            type: 'factoid',
-          }
-        }
 
-        // referencesEntity
-        const referencesEntityNode = obj.referencesEntity
-        if (!nodesMap[referencesEntityNode]) {
-          const referencesEntityType = obj.referencesEntityType
-          console.log({referencesEntityType, obj})
-          // const localReferencesEntityType = referencesEntityType.split("#")[1]
-          let color = 'gray'
-          switch (referencesEntityType) {
-            /*
+      const node = obj.s
+      // factoid
+      if (!nodesMap[node]) {
+        nodesMap[node] = {
+          id: node,
+          label: obj.desc,
+          shape: 'dot',
+          color: 'orange',
+          shadow: true,
+          original_color: 'orange',
+          type: 'factoid',
+        }
+      }
+
+      // referencesEntity
+      const referencesEntityNode = obj.referencesEntity
+      if (!nodesMap[referencesEntityNode]) {
+        const referencesEntityType = obj.referencesEntityType
+        console.log({ referencesEntityType, obj })
+        // const localReferencesEntityType = referencesEntityType.split("#")[1]
+        let color = 'gray'
+        switch (referencesEntityType) {
+          /*
             case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Location':
               // 式の結果が value1 に一致する場合に実行する文
               color = '#98fb98'
               break
               */
-            case 'https://pleiades.stoa.org/places/vocab#Place':
-              // 式の結果が value1 に一致する場合に実行する文
-              color = '#98fb98'
-              break
-            case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#Community':
-              // 式の結果が value1 に一致する場合に実行する文
-              color = 'red'
-              break
-            case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#ConceptualObject':
-              // 式の結果が value1 に一致する場合に実行する文
-              color = 'yellow'
-              break
-            case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#PhysicalObject':
-              // 式の結果が value1 に一致する場合に実行する文
-              color = 'yellow'
-              break
-            case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Group':
-              // 式の結果が value1 に一致する場合に実行する文
-              color = 'orange'
-              break
-            case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Person':
-              // 式の結果が value1 に一致する場合に実行する文
-              color = '#03A9F4'
-              break
-          }
-          nodesMap[referencesEntityNode] = {
-            id: referencesEntityNode,
-            label: obj.referencesEntityName,
-            shape: 'dot',
-            color,
-            shadow: true,
-            original_color: color,
-          }
+          case 'https://pleiades.stoa.org/places/vocab#Place':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = '#98fb98'
+            break
+          case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#Community':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'red'
+            break
+          case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#ConceptualObject':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'yellow'
+            break
+          case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#PhysicalObject':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'yellow'
+            break
+          case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Group':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'orange'
+            break
+          case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Person':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = '#03A9F4'
+            break
         }
-
-        // factoidとreferencesEntity間のエッジ
-        const edge4referencesEntity = `${node}-${referencesEntityNode}`
-        edgesMap[edge4referencesEntity] = {
-          from: node,
-          to: referencesEntityNode,
-          // color: "blue",
-          color: 'gray',
-          arrows: {
-            to: {
-              enabled: true,
-              type: 'arrow',
-            },
-          },
+        nodesMap[referencesEntityNode] = {
+          id: referencesEntityNode,
+          label: obj.referencesEntityName,
+          shape: 'dot',
+          color,
+          shadow: true,
+          original_color: color,
         }
-      
-
-      const nodeS = node // obj.s
-
-      if(obj.o){
-        const nodeO = obj.o
-
-      // factoid間のエッジ
-      const edge = `${nodeS}-${nodeO}`
-      
-      let from = null
-      let to = null
-      if(obj.typeOfO){
-        from = nodeS
-        to = nodeO
-      } else {
-        from = nodeO
-        to = nodeS
       }
 
-      edgesMap[edge] = {
-        from,
-        to,
+      // factoidとreferencesEntity間のエッジ
+      const edge4referencesEntity = `${node}-${referencesEntityNode}`
+      edgesMap[edge4referencesEntity] = {
+        from: node,
+        to: referencesEntityNode,
+        // color: "blue",
         color: 'gray',
         arrows: {
           to: {
@@ -235,17 +220,46 @@ export default {
           },
         },
       }
+
+      const nodeS = node // obj.s
+
+      if (obj.o) {
+        const nodeO = obj.o
+
+        let from = null
+        let to = null
+        if (obj.typeOfO) {
+          from = nodeS
+          to = nodeO
+        } else {
+          from = nodeO
+          to = nodeS
+        }
+
+        // factoid間のエッジ
+        const edge = `${from}-${to}`
+
+        edgesMap[edge] = {
+          from,
+          to,
+          color: 'gray',
+          arrows: {
+            to: {
+              enabled: true,
+              type: 'arrow',
+            },
+          },
+          type: 'factoidRelation',
+        }
       }
-      
     }
 
-    
     const res = await this.getAssociatedObjects(nodesMap, edgesMap)
     nodesMap = res.nodesMap
     edgesMap = res.edgesMap
     /*
-    */
-   
+     */
+
     this.nodesMap = nodesMap
     this.edgesMap = edgesMap
 
@@ -569,6 +583,10 @@ export default {
         const fromUri = edge.from
         const toUri = edge.to
         if (nodesUris.includes(fromUri) && nodesUris.includes(toUri)) {
+          // 表示・非表示オプション
+          if (!this.showFactoidRelation && edge.type === 'factoidRelation') {
+            continue
+          }
           edges.push(edge)
         }
       }
