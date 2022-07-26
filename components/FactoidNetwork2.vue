@@ -24,6 +24,7 @@ export default {
   components: {
     network: Network,
   },
+  /*
   props: {
     id: {
       type: String,
@@ -31,6 +32,7 @@ export default {
       default: '',
     },
   },
+  */
   data() {
     return {
       isLemma: false,
@@ -59,8 +61,21 @@ export default {
     isLemma() {
       this.drawNetwork()
     },
+    /*
     id() {
       const id = this.id
+      console.log("!!! watch")
+      const network = this.$refs.network
+      if(!network){
+        return
+      }
+      network.selectNodes([id])
+      this.neighbourhoodHighlight([id])
+    },
+    */
+    selectedFactoidIdOnText() {
+      const id = this.selectedFactoidIdOnText
+      // console.log("!!! watch 2")
       const network = this.$refs.network
       if(!network){
         return
@@ -104,8 +119,8 @@ export default {
     const { data } = await this.$axios.get(url)
     console.log({data})
 
-    const nodesMap = {}
-    const edgesMap = {}
+    let nodesMap = {}
+    let edgesMap = {}
 
     for (const obj of data) {
       if(obj.er === "https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#EntityReference"){
@@ -224,10 +239,11 @@ export default {
       
     }
 
-    /*
+    
     const res = await this.getAssociatedObjects(nodesMap, edgesMap)
     nodesMap = res.nodesMap
     edgesMap = res.edgesMap
+    /*
     */
    
     this.nodesMap = nodesMap
@@ -765,7 +781,8 @@ export default {
             })
           )
           */
-          //this.selectedFactoidIdOnText = this.$utils.getIdFromUri(node.id)
+
+          // this.selectedFactoidIdOnText = this.$utils.getIdFromUri(node.id)
           const id = node.id
           this.selectedFactoidIdOnText = id
         } else {
@@ -783,7 +800,7 @@ export default {
             })
           )
           */
-          //this.selectedEntityIdOnText = this.$utils.getIdFromUri(node.context)
+          // this.selectedEntityIdOnText = this.$utils.getIdFromUri(node.context)
           this.selectedEntityIdOnText = node.context
         }
       }

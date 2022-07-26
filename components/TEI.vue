@@ -40,7 +40,7 @@
           >
             <template #activator="{ on, attrs }">
               <div
-                :id="$utils.getIdFromUri(factoid.id)"
+                :id="`roman-${$utils.getIdFromUri(factoid.id)}`"
                 v-bind="attrs"
                 style="margin-bottom: 4px; height: 8px; cursor: pointer"
                 :style="`background-color: ${getTypeColor(factoid.type)}`"

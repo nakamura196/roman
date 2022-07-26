@@ -473,15 +473,19 @@ export default {
 
       const endpoint = process.env.endpoint
 
+      /// ex:referencesLemma
+
       const query = `prefix ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
       prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       SELECT * WHERE {
-        ?s ?v ?ao . ?ao ex:hasLemma/ex:referencesLemma ?lemma; a ?type .
+        ?s ?v ?ao . ?ao ex:hasLemma ?lemma; a ?type .
         filter (${filter})
         SERVICE <https://dydra.com/i2k/lemmabank/sparql> {
           ?lemma rdfs:label ?label .
         }
       }`
+
+      
 
       // SILENT を外した
 

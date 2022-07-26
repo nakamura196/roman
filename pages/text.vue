@@ -337,8 +337,8 @@ export default {
       }
       try {
         const scrollTo = scroller()
-        scrollTo('#' + id, 500, {
-        //scrollTo(id, 500, {
+        scrollTo(`#roman-${id}`, 500, {
+        // scrollTo(id, 500, {
           offset: -100,
           container: '#textDiv',
           y: true,
