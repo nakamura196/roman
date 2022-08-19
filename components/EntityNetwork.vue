@@ -203,9 +203,11 @@ export default {
           optional { ?s ex:hasLocation/ex:sourceDescritpion ?locationDescription . }
       }`
 
-      const { data } = await this.$axios.get(
+      let { data } = await this.$axios.get(
         `${this.endpoint}?query=${encodeURIComponent(query4Entity)}`
       )
+
+      data = this.$utils.convertVtoD(data)
 
       const item = data[0]
       this.item = item
@@ -227,11 +229,11 @@ export default {
         ?entityReference ex:referencesEntityInContext ?entityInContext; ex:referencesEntity/rdf:type ?typeOfEntity .
         filter (${filter}) .
         ?factoid ?hasReference ?entityReference .
-        ?hasReference rdfs:subPropertyOf* ?propertyClass .
+        ?hasReference rdfs:subPropertyOf*/rdfs:subPropertyOf ?propertyClass .
         filter (?propertyClass = ex:sceneObjectProperty || ?propertyClass = ex:sceneProperty).
         ?factoid ?hasReference2 ?entityReference2 .
         filter (?entityReference != ?entityReference2)
-        ?hasReference2 rdfs:subPropertyOf* ?propertyClass .
+        ?hasReference2 rdfs:subPropertyOf*/rdfs:subPropertyOf ?propertyClass .
         ?entityReference2 ex:referencesEntity ?entity; rdf:type ?typeOfEntityReference .
         OPTIONAL {
           ?entityReference2 ex:referencesEntityInContext ?entityInContext2 .
@@ -241,7 +243,14 @@ export default {
 
       const url = `${this.endpoint}?query=${encodeURIComponent(query)}`
 
-      const { data } = await this.$axios.get(url)
+      console.log()
+
+      let { data } = await this.$axios.get(url)
+
+      data = this.$utils.convertVtoD(data)
+
+      console.log(data)
+
 
       const relationsByFactoid = {}
 
@@ -491,7 +500,10 @@ export default {
 
       const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
-      const { data } = await this.$axios.get(url)
+      let { data } = await this.$axios.get(url)
+
+    data = this.$utils.convertVtoD(data)
+
 
       const factoidUri2labels = {}
 

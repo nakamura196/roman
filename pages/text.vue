@@ -113,7 +113,6 @@ export default {
     selectedFactoidIdOnText(val) {
       const id = this.$utils.getIdFromUri(val)
       this.scroll(id)
-      console.log(id)
     },
 
     selectedEntityIdOnText(val) {
@@ -152,8 +151,6 @@ export default {
       wids.push(id)
     }
 
-    console.log("wids", wids[0])
-
 /*
     const query4factoids = `
     prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -178,7 +175,7 @@ export default {
     prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     prefix ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
     select * where {
-      ?s a/rdfs:subClassOf* ex:Factoid;
+      ?s a/rdfs:subClassOf*/rdfs:subClassOf ex:Factoid;
             a ?type;
             ex:from ?from;
             ex:to ?to;
@@ -192,9 +189,9 @@ export default {
 
     const url = `${endpoint}?query=${encodeURIComponent(query4factoids)}`
 
-    const { data } = await this.$axios.get(url)
+    let { data } = await this.$axios.get(url)
 
-    console.log("検索結果", data.length)
+    data = this.$utils.convertVtoD(data)
 
     const factoids = {}
     for (const obj of data) {
@@ -313,8 +310,6 @@ export default {
 
     */
 
-    console.log({metadata, entityAttributes})
-
     this.wordAttributes = metadata
     this.entityAttributes = entityAttributes
     this.element = df
@@ -331,7 +326,6 @@ export default {
   },
   methods: {
     scroll(id) {
-      console.log(id)
       if (!id) {
         return
       }

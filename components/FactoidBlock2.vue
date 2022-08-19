@@ -104,21 +104,23 @@ export default {
             }
         }`
 
-      const data4Fact = (
+      let data4Fact = (
         await axios.get(`${url}?query=${encodeURIComponent(query4Fact)}`)
       ).data
+
+      data4Fact = data4Fact.results.bindings
 
       const item = {}
       for (let i = 0; i < data4Fact.length; i++) {
         const eachData4Fact = data4Fact[i]
         if (i === 0) {
           for (const key in eachData4Fact) {
-            item[key] = eachData4Fact[key]
+            item[key] = eachData4Fact[key].value
           }
           item.placeUri = []
         }
 
-        item.placeUri.push(eachData4Fact.placeUri)
+        item.placeUri.push(eachData4Fact.placeUri.value)
       }
 
       this.item = item
@@ -158,7 +160,9 @@ export default {
 
       const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
-      const { data } = await this.$axios.get(url)
+      let { data } = await this.$axios.get(url)
+
+      data = data.results.bindings
 
       if (data.length > 0) {
         const features = []
@@ -170,19 +174,19 @@ export default {
           if (!geo.lat) {
             features.push({
               type: 'Feature',
-              geometry: JSON.parse(geo.geo),
+              geometry: JSON.parse(geo.geo.value),
               properties: {
-                label: geo.title,
-                uri: geo.placeUri,
+                label: geo.title.value,
+                uri: geo.placeUri.value,
               },
             })
           } else {
             const marker = {
-              latLng: [geo.lat, geo.long],
-              label: geo.title,
+              latLng: [geo.lat.value, geo.long.value],
+              label: geo.title.value,
             }
             markers.push(marker)
-            center = [geo.lat, geo.long]
+            center = [geo.lat.value, geo.long.value]
           }
         }
 

@@ -101,9 +101,10 @@ export default {
   async mounted() {
     const query = `
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     PREFIX ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
     SELECT * WHERE {
-      ?s a/rdfs:subClassOf* ex:Factoid;
+      ?s a/rdfs:subClassOf*/rdfs:subClassOf ex:Factoid;
         ex:description ?desc . 
       ?s ?p ?ref . 
       ?ref a/rdfs:subClassOf* ?er;
@@ -112,15 +113,16 @@ export default {
       optional {
         ?referencesEntity ex:name ?referencesEntityName;
         a ?referencesEntityType .
+        filter (?referencesEntityType != skos:Concept)
       }
       optional { ?ref ex:referencesEntityInContext ?referencesEntityInContext } 
       optional { 
         {
-          ?s ?v ?o . ?o a ?typeOfO . ?o a/rdfs:subClassOf* ex:Factoid .
+          ?s ?v ?o . ?o a ?typeOfO . ?o a/rdfs:subClassOf*/rdfs:subClassOf ex:Factoid .
         }
         UNION
         {
-          ?o ?v ?s . ?o a ?typeOfS . ?o a/rdfs:subClassOf* ex:Factoid .
+          ?o ?v ?s . ?o a ?typeOfS . ?o a/rdfs:subClassOf*/rdfs:subClassOf ex:Factoid .
         }
       }
     }`
@@ -129,11 +131,12 @@ export default {
 
     const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
-    const { data } = await this.$axios.get(url)
-    console.log({ data })
+    let { data } = await this.$axios.get(url)
 
-    let nodesMap = {}
-    let edgesMap = {}
+    data = this.$utils.convertVtoD(data)
+
+    const nodesMap = {}
+    const edgesMap = {}
 
     for (const obj of data) {
       if (
@@ -161,7 +164,6 @@ export default {
       const referencesEntityNode = obj.referencesEntity
       if (!nodesMap[referencesEntityNode]) {
         const referencesEntityType = obj.referencesEntityType
-        console.log({ referencesEntityType, obj })
         // const localReferencesEntityType = referencesEntityType.split("#")[1]
         let color = 'gray'
         switch (referencesEntityType) {
@@ -196,6 +198,7 @@ export default {
             color = '#03A9F4'
             break
         }
+
         nodesMap[referencesEntityNode] = {
           id: referencesEntityNode,
           label: obj.referencesEntityName,
@@ -254,11 +257,11 @@ export default {
       }
     }
 
+    /*
     const res = await this.getAssociatedObjects(nodesMap, edgesMap)
     nodesMap = res.nodesMap
     edgesMap = res.edgesMap
-    /*
-     */
+    */
 
     this.nodesMap = nodesMap
     this.edgesMap = edgesMap
@@ -323,7 +326,9 @@ export default {
 
     const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
-    const { data } = await this.$axios.get(url)
+    let { data } = await this.$axios.get(url)
+
+    data = this.$utils.convertV2D(data)
 
     let nodesMap = {}
     let edgesMap = {}
@@ -478,7 +483,9 @@ export default {
 
       const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
-      const { data } = await this.$axios.get(url)
+      let { data } = await this.$axios.get(url)
+
+      data = this.$utils.convertV2D(data)
 
       const factoidUri2labels = {}
 
@@ -597,7 +604,6 @@ export default {
     neighbourhoodHighlightByHand(params) {
       this.neighbourhoodHighlight(params.nodes)
       this.onNodeSelected(params)
-      console.log(params)
     },
     neighbourhoodHighlight(selectNodes) {
       const allNodes = JSON.parse(JSON.stringify(this.nodesMap))
@@ -696,7 +702,6 @@ export default {
       this.nodes = updateArray
     },
     neighbourhoodHighlight2(params) {
-      console.log({ params })
 
       const allNodes = JSON.parse(JSON.stringify(this.nodesMap))
 
@@ -782,7 +787,6 @@ export default {
     // クリックした時の処理
     onNodeSelected(value) {
       const nodes = value.nodes
-      console.log(this.nodesMap)
 
       if (nodes.length > 0) {
         const uri = nodes[0]

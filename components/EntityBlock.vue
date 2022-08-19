@@ -79,11 +79,11 @@ export default {
             optional { ?s ex:hasLocation/ex:sourceDescritpion ?locationDescription . }
         }`
 
-      const { data } = await axios.get(
+      let { data } = await axios.get(
         `${url}?query=${encodeURIComponent(query4Entity)}`
       )
 
-      console.log(data)
+      data = this.$utils.convertVtoD(data)
 
       const item = data[0]
 

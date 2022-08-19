@@ -91,6 +91,19 @@ export class Utils {
     }
     return factoidId.replace('f_', 'Fact ')
   }
+
+  convertVtoD(data: any) {
+    const convertedData = []
+    data = data.results.bindings
+    for (const item of data) {
+      const convertedItem: any = {}
+      for(const key in item){
+        convertedItem[key] = item[key].value
+      }
+      convertedData.push(convertedItem)
+    }
+    return convertedData
+  }
 }
 
 export default (_: any, inject: any) => {
