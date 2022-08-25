@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" app>
       <Menu></Menu>
     </v-navigation-drawer>
-    <v-app-bar app depressed color="primary" flat dark>
+    <v-app-bar app depressed color="primary" flat dark dense>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <v-toolbar-title>

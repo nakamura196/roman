@@ -1,6 +1,6 @@
 <template>
   <div v-if="nodes.length > 0" class="mb-5">
-    {{ selectedFactoidIdOnText }}
+    <!-- {{ selectedFactoidIdOnText }} -->
     <network
       ref="network"
       class="mt-5"
@@ -135,8 +135,8 @@ export default {
 
     data = this.$utils.convertVtoD(data)
 
-    const nodesMap = {}
-    const edgesMap = {}
+    let nodesMap = {}
+    let edgesMap = {}
 
     for (const obj of data) {
       if (
@@ -257,10 +257,11 @@ export default {
       }
     }
 
-    /*
+    
     const res = await this.getAssociatedObjects(nodesMap, edgesMap)
     nodesMap = res.nodesMap
     edgesMap = res.edgesMap
+    /*
     */
 
     this.nodesMap = nodesMap
@@ -328,7 +329,7 @@ export default {
 
     let { data } = await this.$axios.get(url)
 
-    data = this.$utils.convertV2D(data)
+    data = this.$utils.convertVtoD(data)
 
     let nodesMap = {}
     let edgesMap = {}
@@ -474,18 +475,16 @@ export default {
       SELECT * WHERE {
         ?s ?v ?ao . ?ao ex:hasLemma ?lemma; a ?type .
         FILTER (${filter})
-        SERVICE <https://dydra.com/i2k/lemmabank/sparql> {
+        # SERVICE <https://dydra.com/i2k/lemmabank/sparql> {
           ?lemma rdfs:label ?label .
-        }
+        # }
       }`
-
-      // SILENT
 
       const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
       let { data } = await this.$axios.get(url)
 
-      data = this.$utils.convertV2D(data)
+      data = this.$utils.convertVtoD(data)
 
       const factoidUri2labels = {}
 

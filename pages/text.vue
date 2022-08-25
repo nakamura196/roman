@@ -1,6 +1,43 @@
 <template>
   <div>
-    <v-container fluid>
+    <splitpanes class="default-theme" :style="`height: ${height}px`">
+      <pane min-size="20">
+        <splitpanes horizontal>
+          <pane>
+            <div
+              id="textDiv"
+              :style="`height: 100%; overflow-y: auto`"
+              class="pa-2"
+            >
+              <TEI v-if="element" :element="element" />
+            </div>
+          </pane>
+          <pane>
+            <span>地図</span>
+          </pane>
+        </splitpanes>
+      </pane>
+      <pane>
+        <splitpanes horizontal>
+          <pane>
+            <FactoidBlock2
+              :id="selectedFactoidIdOnText"
+              class="pa-2"
+              :style="`height: 100%; overflow-y: auto`"
+            />
+          </pane>
+          <pane>
+            <EntityBlock
+              v-if="selectedEntityIdOnText"
+              :id="selectedEntityIdOnText"
+              class="pa-2"
+              :style="`height: 100%; overflow-y: auto`"
+            />
+          </pane>
+        </splitpanes>
+      </pane>
+    </splitpanes>
+    <v-container v-if="false" fluid>
       <v-row>
         <v-col id="textDiv" :style="`height: ${height}px; overflow-y: auto`">
           <TEI v-if="element" :element="element" />
@@ -15,9 +52,7 @@
           <!-- v-if="selectedFactoidIdOnText" -->
 
           <!--factoidのIDは、/を含めない形にする必要がある-->
-          <FactoidBlock2
-            :id="selectedFactoidIdOnText"
-          />
+          <FactoidBlock2 :id="selectedFactoidIdOnText" />
           <!--
           <EntityBlock
             v-if="selectedEntityIdOnText"
@@ -36,10 +71,17 @@
 <script>
 import axios from 'axios'
 
+import 'splitpanes/dist/splitpanes.css'
+
 const convert = require('xml-js')
 const { scroller } = require('vue-scrollto/src/scrollTo')
+const { Splitpanes, Pane } = require('splitpanes')
 
 export default {
+  components: {
+    Splitpanes,
+    Pane,
+  },
   layout: 'noFooter',
   data() {
     return {
@@ -47,7 +89,8 @@ export default {
       top: process.env.top,
       siteName: process.env.siteName,
       element: null,
-      height: window.innerHeight - 64,
+      barHeight: 48, // 64,
+      height: window.innerHeight - 48, // this.barHeight,
     }
   },
   computed: {
@@ -151,7 +194,7 @@ export default {
       wids.push(id)
     }
 
-/*
+    /*
     const query4factoids = `
     prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     prefix ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
@@ -196,7 +239,7 @@ export default {
     const factoids = {}
     for (const obj of data) {
       const factoidUri = obj.s
-      if(!factoids[factoidUri]) {
+      if (!factoids[factoidUri]) {
         factoids[factoidUri] = obj
         factoids[factoidUri].refs = []
       }
@@ -206,10 +249,10 @@ export default {
     const metadata = {}
     const entityAttributes = {}
 
-    for(const factoidUri in factoids){
+    for (const factoidUri in factoids) {
       const factoid = factoids[factoidUri]
       const spanId = factoidUri // span.getAttribute('xml:id')
-      const type = factoid.type.split("#")[1]
+      const type = factoid.type.split('#')[1]
 
       const from = this.$utils.getIdFromUri(factoid.from)
       const to = this.$utils.getIdFromUri(factoid.to)
@@ -231,7 +274,7 @@ export default {
         })
       }
 
-      for(const ref of factoid.refs){
+      for (const ref of factoid.refs) {
         /*
         if (!name.getAttribute('target')) {
           continue
@@ -239,7 +282,7 @@ export default {
         */
         // const refs = name.querySelectorAll('ref')
         // for (const ref of refs) {
-          /*
+        /*
           if (ref.getAttribute('ana') === 'referencesEntityInContext') {
             const correspId = name.getAttribute('target').replace('#', '')
             const referencesEntityInContextUri = ref.getAttribute('target')
@@ -247,11 +290,11 @@ export default {
           }
           */
 
-         if(ref.ref_referencesEntityInContext){
+        if (ref.ref_referencesEntityInContext) {
           const correspId = this.$utils.getIdFromUri(ref.ref_sourceDescription)
           const referencesEntityInContextUri = ref.ref_referencesEntityInContext
           entityAttributes[correspId] = referencesEntityInContextUri
-         }
+        }
 
         // }
       }
@@ -332,7 +375,7 @@ export default {
       try {
         const scrollTo = scroller()
         scrollTo(`#roman-${id}`, 500, {
-        // scrollTo(id, 500, {
+          // scrollTo(id, 500, {
           offset: -100,
           container: '#textDiv',
           y: true,
