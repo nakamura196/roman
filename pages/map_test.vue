@@ -1,15 +1,16 @@
 <template>
   <div>
     <div id="view">
-    <button @click="add_node">push</button>
-    <div id="cy"></div>
-  </div>
+      <button @click="add_node">push</button>
+      <v-btn @click="calc_test">test</v-btn>
+      <div id="cy"></div>
+    </div>
     <NewMap v-if="false" :center="center" :markers="markers" />
   </div>
 </template>
 <script>
 import NewMap from '~/components/NewMap.vue'
-const cytoscape = require("cytoscape")
+const cytoscape = require('cytoscape')
 
 export default {
   components: {
@@ -21,7 +22,7 @@ export default {
       center: [46.5, 6.5],
     }
   },
-  mounted() {
+  mounted2() {
     this.view_init()
 
     /*
@@ -51,7 +52,7 @@ export default {
 
     */
   },
-  async mounted2() {
+  async mounted() {
     const query = `
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -88,58 +89,274 @@ export default {
 
     data = this.$utils.convertVtoD(data)
 
+    const nodesMap = {}
+    const edgesMap = {}
+
     for (const obj of data) {
+      if (
+        obj.er ===
+        'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#EntityReference'
+      ) {
+        continue
+      }
+
+      const node = obj.s
+      // factoid
+      if (!nodesMap[node]) {
+        nodesMap[node] = {
+          id: node,
+          label: obj.desc,
+          shape: 'dot',
+          color: 'orange',
+          shadow: true,
+          original_color: 'orange',
+          type: 'factoid',
+        }
+      }
+
+      // referencesEntity
       const referencesEntityNode = obj.referencesEntity
-      const referencesEntityType = obj.referencesEntityType
-      switch (referencesEntityType) {
-        /*
+      if (!nodesMap[referencesEntityNode]) {
+        const referencesEntityType = obj.referencesEntityType
+        // const localReferencesEntityType = referencesEntityType.split("#")[1]
+        let color = 'gray'
+        // let type = ""
+        switch (referencesEntityType) {
+          /*
             case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Location':
               // 式の結果が value1 に一致する場合に実行する文
               color = '#98fb98'
               break
               */
-        case 'https://pleiades.stoa.org/places/vocab#Place':
-          console.log({
-            referencesEntityNode,
-            obj,
-          })
+          case 'https://pleiades.stoa.org/places/vocab#Place':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = '#98fb98'
+            // type = "place"
+            break
+          case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#Community':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'red'
+            break
+          case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#ConceptualObject':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'yellow'
+            break
+          case 'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#PhysicalObject':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'yellow'
+            break
+          case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Group':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = 'orange'
+            break
+          case 'https://github.com/johnBradley501/FPO/raw/master/fpo.owl#Person':
+            // 式の結果が value1 に一致する場合に実行する文
+            color = '#03A9F4'
+            break
+        }
+
+        nodesMap[referencesEntityNode] = {
+          id: referencesEntityNode,
+          label: obj.referencesEntityName,
+          shape: 'dot',
+          color,
+          shadow: true,
+          original_color: color,
+          type: referencesEntityType,
+        }
+      }
+
+      // factoidとreferencesEntity間のエッジ
+      const edge4referencesEntity = `${node}-${referencesEntityNode}`
+      edgesMap[edge4referencesEntity] = {
+        from: node,
+        to: referencesEntityNode,
+        // color: "blue",
+        color: 'gray',
+        arrows: {
+          to: {
+            enabled: true,
+            type: 'arrow',
+          },
+        },
+      }
+
+      const nodeS = node // obj.s
+
+      if (obj.o) {
+        const nodeO = obj.o
+
+        let from = null
+        let to = null
+        if (obj.typeOfO) {
+          from = nodeS
+          to = nodeO
+        } else {
+          from = nodeO
+          to = nodeS
+        }
+
+        // factoid間のエッジ
+        const edge = `${from}-${to}`
+
+        edgesMap[edge] = {
+          from,
+          to,
+          color: 'gray',
+          arrows: {
+            to: {
+              enabled: true,
+              type: 'arrow',
+            },
+          },
+          type: 'factoidRelation',
+        }
       }
     }
+
+    // const res = await this.getAssociatedObjects(nodesMap, edgesMap)
+    // nodesMap = res.nodesMap
+    // edgesMap = res.edgesMap
+
+    console.log({ nodesMap, edgesMap })
+
+    const nodesArray = []
+
+    /*
+    [
+            { data: { id: 'cat' } },
+            { data: { id: 'bird' } },
+            { data: { id: 'ladybug' } },
+            { data: { id: 'aphid' } },
+            { data: { id: 'rose' } },
+            { data: { id: 'grasshopper' } },
+            { data: { id: 'plant' } },
+            { data: { id: 'wheat' } },
+          ]
+    */
+
+    for (const nodeId in nodesMap) {
+      const node = nodesMap[nodeId]
+      const type = node.type
+      nodesArray.push({
+        data: {
+          id: nodeId,
+          background_color: node.color,
+        },
+      })
+    }
+
+    const edgesArray = []
+
+    for (const edgeId in edgesMap) {
+      const edge = edgesMap[edgeId]
+      edgesArray.push({
+        data: {
+          source: edge.from,
+          target: edge.to,
+        },
+      })
+    }
+
+    /*
+   [
+      { data: { source: 'cat', target: 'bird' } },
+      { data: { source: 'bird', target: 'ladybug' } },
+      { data: { source: 'bird', target: 'grasshopper' } },
+      { data: { source: 'grasshopper', target: 'plant' } },
+      { data: { source: 'grasshopper', target: 'wheat' } },
+      { data: { source: 'ladybug', target: 'aphid' } },
+      { data: { source: 'aphid', target: 'rose' } },
+    ]
+   */
+
+    const cy = cytoscape({
+      container: document.getElementById('cy'),
+      boxSelectionEnabled: false,
+      autounselectify: true,
+      style: cytoscape
+        .stylesheet()
+        .selector('node')
+        .css({
+          height: 80,
+          width: 80,
+          'background-fit': 'cover',
+          'border-color': '#000',
+          'border-width': 3,
+          'border-opacity': 0.5,
+          content: 'data(name)',
+          'text-valign': 'center',
+        })
+        .selector('edge')
+        .css({
+          width: 6,
+          'target-arrow-shape': 'triangle',
+          'line-color': '#ffaaaa',
+          'target-arrow-color': '#ffaaaa',
+          'curve-style': 'bezier',
+        })
+        .selector('node[background_color]')
+        .css({
+          'background-color': 'data(background_color)',
+          'text-outline-color': 'data(background_color)',
+        }),
+      elements: {
+        nodes: nodesArray,
+        edges: edgesArray,
+      },
+      layout: {
+        name: 'breadthfirst',
+        directed: true,
+        padding: 10,
+      },
+    })
+
+    this.cy = cy
   },
   methods: {
-    add_node () {
-      console.info(this.cy)
+    add_node() {
       this.cy.add([
-        { 'group': 'nodes', data: { 'id': 'node' + this.count }, position: { x: 300, y: 200 } },
-        {'group': 'edges', data: {'id': 'edge' + this.count, 'source': 'node' + this.count, 'target': 'cat'}}
+        {
+          group: 'nodes',
+          data: { id: 'node' + this.count },
+          position: { x: 300, y: 200 },
+        },
+        {
+          group: 'edges',
+          data: {
+            id: 'edge' + this.count,
+            source: 'node' + this.count,
+            target: 'cat',
+          },
+        },
       ])
     },
-    view_init () {
-    this.cy = cytoscape(
-      {
+    view_init() {
+      const cy = cytoscape({
         container: document.getElementById('cy'),
         boxSelectionEnabled: false,
         autounselectify: true,
-        style: cytoscape.stylesheet()
-            .selector('node')
-            .css({
-              'height': 80,
-              'width': 80,
-              'background-fit': 'cover',
-              'border-color': '#000',
-              'border-width': 3,
-              'border-opacity': 0.5,
-              'content': 'data(name)',
-              'text-valign': 'center'
-            })
-            .selector('edge')
-            .css({
-              'width': 6,
-              'target-arrow-shape': 'triangle',
-              'line-color': '#ffaaaa',
-              'target-arrow-color': '#ffaaaa',
-              'curve-style': 'bezier'
-            }),
+        style: cytoscape
+          .stylesheet()
+          .selector('node')
+          .css({
+            height: 80,
+            width: 80,
+            'background-fit': 'cover',
+            'border-color': '#000',
+            'border-width': 3,
+            'border-opacity': 0.5,
+            content: 'data(name)',
+            'text-valign': 'center',
+          })
+          .selector('edge')
+          .css({
+            width: 6,
+            'target-arrow-shape': 'triangle',
+            'line-color': '#ffaaaa',
+            'target-arrow-color': '#ffaaaa',
+            'curve-style': 'bezier',
+          }),
         elements: {
           nodes: [
             { data: { id: 'cat' } },
@@ -149,7 +366,7 @@ export default {
             { data: { id: 'rose' } },
             { data: { id: 'grasshopper' } },
             { data: { id: 'plant' } },
-            { data: { id: 'wheat' } }
+            { data: { id: 'wheat' } },
           ],
           edges: [
             { data: { source: 'cat', target: 'bird' } },
@@ -158,28 +375,73 @@ export default {
             { data: { source: 'grasshopper', target: 'plant' } },
             { data: { source: 'grasshopper', target: 'wheat' } },
             { data: { source: 'ladybug', target: 'aphid' } },
-            { data: { source: 'aphid', target: 'rose' } }
-          ]
+            { data: { source: 'aphid', target: 'rose' } },
+          ],
         },
         layout: {
           name: 'breadthfirst',
           directed: true,
-          padding: 10
+          padding: 10,
+        },
+      })
+
+      this.cy = cy
+
+      this.calc_test()
+    },
+
+    calc_test() {
+      const cy = this.cy
+
+      // console.log(cy.elements())
+
+      const fromId = 'cat'
+
+      const dijkstra = cy.elements().dijkstra(
+        `#${fromId}` /*, function(edge){
+        return edge.data('weight');
+      } */
+      )
+
+      // console.log({dijkstra})
+
+      for (const element of cy.elements()) {
+        /*
+
+        const toId = "bird"
+
+        const pathToJ = dijkstra.pathTo( cy.$(`#${toId}`) );
+        const distToJ = dijkstra.distanceTo( cy.$(`#${toId}`) );
+
+        console.log({pathToJ, distToJ })
+
+        */
+
+        const toId = element[0]._private.data.id
+
+        if (toId === fromId) {
+          continue
         }
+
+        // console.log()
+
+        const pathToJ = dijkstra.pathTo(cy.$(`#${toId}`))
+        const distToJ = dijkstra.distanceTo(cy.$(`#${toId}`))
+
+        console.log(toId, { pathToJ, distToJ })
       }
-    )
-  }
-  }
+    },
+  },
 }
 </script>
 <style scoped>
 #cy {
-    width: 100%;
-    height: 80%;
-    position: absolute;
-    top: 50px;
-    left: 1px;
-    text-align: left;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 50px;
+  left: 1px;
+  text-align: left;
 }
 
 body {
