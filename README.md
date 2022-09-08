@@ -73,3 +73,25 @@ More information about the usage of this directory in [the documentation](https:
 - 地図との連携
 - レイアウト
 - ネットワーク
+
+# Virtuoso
+
+```bash
+DB.DBA.TTLP_MT (file_to_string_output ('places-1.ttl'), '', 'http://localhost:8890/places-1');
+```
+
+# Virtuosoの再起動
+
+```bash
+ssh [ユーザ名]@[IPアドレス]
+```
+
+サーバにログイン後、以下を実行
+
+```bash
+sudo su
+# 停止
+/usr/local/bin/isql localhost:1111 [virtuosoのユーザ名] [virtuosoのパスワード] EXEC=shutdown
+# 起動
+/usr/local/bin/virtuoso-t +configfile /usr/local/var/lib/virtuoso/db/virtuoso.ini
+```
