@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import * as md5 from 'md5';
 import { Network } from 'vue-visjs'
 let highlightActive = false
 export default {
@@ -57,6 +58,16 @@ export default {
     }
   },
   computed: {
+    cyElements: {
+      // getter 関数
+      get() {
+        return this.$store.getters.getCyElements
+      },
+      // setter 関数
+      set(value) {
+        this.$store.commit('setCyElements', value)
+      },
+    },
     selectedFactoidIdOnText: {
       // getter 関数
       get() {
@@ -67,6 +78,15 @@ export default {
         this.$store.commit('setSelectedFactoidIdOnText', value)
       },
     },
+    clickedNodeIdOnNetwork: {
+      get() {
+        return this.$store.getters.getClickedNodeIdOnNetwork
+      },
+      // setter 関数
+      set(value) {
+        this.$store.commit('setClickedNodeIdOnNetwork', value)
+      },
+    }
   },
   watch: {
     isLemma() {
@@ -206,6 +226,7 @@ export default {
           color,
           shadow: true,
           original_color: color,
+          type: referencesEntityType,
         }
       }
 
@@ -599,6 +620,38 @@ export default {
 
       this.nodes = nodes
       this.edges = edges
+
+      this.setCyElements()
+    },
+    setCyElements(){
+      const nodes = JSON.parse(JSON.stringify(this.nodes))
+      const edges = JSON.parse(JSON.stringify(this.edges))
+      const cyNodes = []
+      for(const node of nodes){
+        node.uri = node.id
+        node.id = md5(node.id)
+        cyNodes.push({
+          data: node,
+        })
+      }
+
+      const cyEdges = []
+      for(const edge of edges){
+        cyEdges.push({
+          data: {
+            source: md5(edge.from),
+            target: md5(edge.to),
+            label: edge.label,
+          },
+        })
+      }
+
+      this.cyElements = {
+        elements: {
+          nodes: cyNodes,
+          edges: cyEdges,
+        }
+      }
     },
     neighbourhoodHighlightByHand(params) {
       this.neighbourhoodHighlight(params.nodes)
@@ -786,6 +839,8 @@ export default {
     // クリックした時の処理
     onNodeSelected(value) {
       const nodes = value.nodes
+
+      this.clickedNodeIdOnNetwork = nodes[0]
 
       if (nodes.length > 0) {
         const uri = nodes[0]

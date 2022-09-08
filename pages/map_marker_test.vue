@@ -21,7 +21,7 @@
         </l-marker>
       </l-map>
 
-      {{markers.length}}
+      {{ markers.length }}
 
       <v-row class="my-10">
         <v-col>
@@ -44,7 +44,9 @@
                           },
                         })
                       "
-                      >{{ factoid.description }} ({{ $utils.getIdFromUri(factoid.id).replace("f_", "Fact ") }})</nuxt-link
+                      >{{ factoid.description }} ({{
+                        $utils.getIdFromUri(factoid.id).replace('f_', 'Fact ')
+                      }})</nuxt-link
                     >
                   </td>
                 </tr>
@@ -132,8 +134,7 @@ export default {
   },
 
   async mounted() {
-    const endpoint =
-      process.env.endpoint
+    const endpoint = process.env.endpoint
 
     // const filterCriteria = await this.getFilterCriteria()
 
@@ -164,7 +165,7 @@ export default {
 
     const url = `${endpoint}?query=${encodeURIComponent(query)}`
 
-    let { data }  = await this.$axios.get(url)
+    let { data } = await this.$axios.get(url)
 
     data = this.$utils.convertVtoD(data)
 
@@ -187,14 +188,13 @@ export default {
           },
         })
         continue
-      } else if (item.lat){
+      } else if (item.lat) {
         markers.push({
           uri: item.placeUri,
           label: item.title,
           latLng: [item.lat, item.long],
         })
       }
-      
     }
 
     const geojson = {
@@ -260,8 +260,8 @@ export default {
       const factoids = []
       for (const item of data) {
         factoids.push({
-          "id" : item.factoid,
-          "description" : item.description
+          id: item.factoid,
+          description: item.description,
         })
       }
       this.factoids = factoids

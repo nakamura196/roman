@@ -13,7 +13,7 @@
             </div>
           </pane>
           <pane>
-            <span>地図</span>
+            <MapPane />
           </pane>
         </splitpanes>
       </pane>

@@ -55,7 +55,11 @@ export default {
   computed: {
     options() {
       return {
-        onEachFeature: this.onEachFeatureFunction,
+        // onEachFeature: this.onEachFeatureFunction,
+        onEachFeature(feature, layer) {
+          layer.setStyle(feature.properties.style)
+          layer.bindPopup(`<div>${feature.properties.label}</div>`)
+        },
       }
     },
     onEachFeatureFunction() {

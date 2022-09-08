@@ -1,15 +1,28 @@
 <template>
   <div>
-    <div id="view">
-      <button @click="add_node">push</button>
-      <v-btn @click="calc_test">test</v-btn>
-      <div id="cy"></div>
-    </div>
-    <NewMap v-if="false" :center="center" :markers="markers" />
+    <button @click="test">change color</button>
+
+    <v-btn v-for="(color, key) in colors" :key="key" :color="color"> a </v-btn>
+
+    <v-row>
+      <v-col>
+        <div id="view">
+          <button @click="add_node">push</button>
+          <v-btn @click="calc_test">test</v-btn>
+          <div id="cy"></div>
+        </div>
+      </v-col>
+      <v-col>
+        <NewMap :geojson="geojson" :center="center" :markers="markers" />
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>
+import Gradient from 'javascript-color-gradient'
+
 import NewMap from '~/components/NewMap.vue'
+
 const cytoscape = require('cytoscape')
 
 export default {
@@ -20,6 +33,8 @@ export default {
     return {
       markers: [],
       center: [46.5, 6.5],
+      geojson: {},
+      colors: [],
     }
   },
   mounted2() {
@@ -53,6 +68,15 @@ export default {
     */
   },
   async mounted() {
+    const colorAtIndexTwo = new Gradient()
+      .setColorGradient('#4CAF50', '#F44336')
+      .setMidpoint(10)
+      .getColors()
+
+    console.log(colorAtIndexTwo)
+
+    this.colors = colorAtIndexTwo
+
     const query = `
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -312,6 +336,8 @@ export default {
     })
 
     this.cy = cy
+
+    this.getPlaces(nodesMap)
   },
   methods: {
     add_node() {
@@ -330,6 +356,88 @@ export default {
           },
         },
       ])
+    },
+    async getPlaces(nodesMap) {
+      const places = []
+      for (const uri in nodesMap) {
+        const node = nodesMap[uri]
+        if (node.type === 'https://pleiades.stoa.org/places/vocab#Place') {
+          places.push(uri)
+        }
+      }
+
+      const query = `PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+      PREFIX dct: <http://purl.org/dc/terms/>
+      PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+      prefix ex: <https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#>
+      PREFIX pleiades: <https://pleiades.stoa.org/places/vocab#>
+      PREFIX osspatial: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
+      PREFIX osgeo: <http://data.ordnancesurvey.co.uk/ontology/geometry/>
+
+      SELECT distinct * WHERE {
+        ?placeUri ex:name ?title; a pleiades:Place . 
+        filter (?placeUri in (${places
+          .map((place) => `<${place}>`)
+          .join(', ')}))
+        {
+          { ?placeUri wgs84:lat ?lat; wgs84:long ?long . } 
+          UNION 
+          # { ?placeUri pleiades:hasLocation/osspatial:partiallyOverlaps/geo:hasGeometry/osgeo:asGeoJSON ?geo }
+          { ?placeUri pleiades:hasLocation/osgeo:asGeoJSON ?geo }
+          UNION
+          { ?placeUri osspatial:within/osgeo:extent/osgeo:asGeoJSON ?geo }
+           UNION
+          { ?placeUri osspatial:partiallyOverlaps/osgeo:extent/osgeo:asGeoJSON ?geo }
+        
+        }
+      }`
+
+      const endpoint = process.env.endpoint
+
+      const url = `${endpoint}?query=${encodeURIComponent(query)}`
+
+      let { data } = await this.$axios.get(url)
+
+      data = this.$utils.convertVtoD(data)
+
+      console.log({ data })
+
+      const markers = []
+
+      const features = []
+
+      for (const item of data) {
+        // 緯度・経度がない場合はスキップ
+        if (item.geo) {
+          // console.log(item)
+          features.push({
+            type: 'Feature',
+            geometry: JSON.parse(item.geo),
+            properties: {
+              label: item.title,
+              uri: item.placeUri,
+              style: {
+                color: 'red',
+              },
+            },
+          })
+          continue
+        } else if (item.lat) {
+          markers.push({
+            uri: item.placeUri,
+            label: item.title,
+            latLng: [item.lat, item.long],
+          })
+        }
+      }
+
+      const geojson = {
+        type: 'FeatureCollection',
+        features,
+      }
+      this.geojson = geojson
+
+      this.markers = markers
     },
     view_init() {
       const cy = cytoscape({
@@ -390,6 +498,15 @@ export default {
       this.calc_test()
     },
 
+    test() {
+      const geojson = this.geojson
+      for (const feature of geojson.features) {
+        feature.properties.style = {
+          color: 'green',
+        }
+      }
+    },
+
     calc_test() {
       const cy = this.cy
 
@@ -437,7 +554,7 @@ export default {
 <style scoped>
 #cy {
   width: 100%;
-  height: 80%;
+  height: 40%;
   position: absolute;
   top: 50px;
   left: 1px;

@@ -5,6 +5,8 @@ export const state = () => ({
   selectedEntityIdOnText: '',
   selectedReferenceIdOnText: '',
   isRedraw: false,
+  cyElements: [],
+  clickedNodeIdOnNetwork: null,
 })
 
 export const mutations = {
@@ -26,6 +28,13 @@ export const mutations = {
   setIsRedraw(state, data) {
     state.isRedraw = data
   },
+  setCyElements(state, data) {
+    state.cyElements = data
+  },
+  setClickedNodeIdOnNetwork(state, data) {
+    state.clickedNodeIdOnNetwork = data
+  },
+  
 }
 
 export const getters = {
@@ -46,5 +55,11 @@ export const getters = {
   },
   getIsRedraw(state) {
     return state.isRedraw
+  },
+  getCyElements(state) {
+    return state.cyElements
+  },
+  getClickedNodeIdOnNetwork(state) {
+    return state.clickedNodeIdOnNetwork
   },
 }
