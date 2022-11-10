@@ -599,15 +599,21 @@
                     <w xml:id="w_1_3_1_13" lemma="pertineo" lemmaRef="http://lila-erc.eu/data/id/lemma/117404">pertinerent </w>
                     <w xml:id="w_1_3_1_14" lemma="comparo" lemmaRef="http://lila-erc.eu/data/id/lemma/95263 http://lila-erc.eu/data/id/lemma/97455">comparare </w>
                     <w xml:id="w_1_3_1_15" lemma=",">, </w>
-                    <w xml:id="w_1_3_1_16" lemma="iumentum" lemmaRef="http://lila-erc.eu/data/id/lemma/109212">iumentorum </w>
+                    <objectName xmlns="" xml:id="objectName_1_3_1_16" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_1_16" lemma="iumentum" lemmaRef="http://lila-erc.eu/data/id/lemma/109212">iumentorum </w>
+                    </objectName>
                     <w xml:id="w_1_3_1_17" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
-                    <w xml:id="w_1_3_1_18" lemma="carrum" lemmaRef="http://lila-erc.eu/data/id/lemma/92934">carrorum </w>
+                    <objectName xmlns="" xml:id="objectName_1_3_1_18" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_1_18" lemma="carrum" lemmaRef="http://lila-erc.eu/data/id/lemma/92934">carrorum </w>
+                    </objectName>
                     <w xml:id="w_1_3_1_19" lemma="quam" lemmaRef="http://lila-erc.eu/data/id/lemma/74492">quam </w>
                     <w xml:id="w_1_3_1_20" lemma="magnus" lemmaRef="http://lila-erc.eu/data/id/lemma/111319 http://lila-erc.eu/data/id/lemma/63184">maximum </w>
                     <w xml:id="w_1_3_1_21" lemma="numerus" lemmaRef="http://lila-erc.eu/data/id/lemma/113981">numerum </w>
                     <w xml:id="w_1_3_1_22" lemma="coemer">coemere </w>
                     <w xml:id="w_1_3_1_23" lemma=",">, </w>
-                    <w xml:id="w_1_3_1_24" lemma="sementis" lemmaRef="http://lila-erc.eu/data/id/lemma/124097">sementes </w>
+                    <objectName xmlns="" xml:id="objectName_1_3_1_24" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_1_24" lemma="sementis" lemmaRef="http://lila-erc.eu/data/id/lemma/124097">sementes </w>
+                    </objectName>
                     <w xml:id="w_1_3_1_25" lemma="quam" lemmaRef="http://lila-erc.eu/data/id/lemma/74492">quam </w>
                     <w xml:id="w_1_3_1_26" lemma="magnus" lemmaRef="http://lila-erc.eu/data/id/lemma/111319 http://lila-erc.eu/data/id/lemma/63184">maximas </w>
                     <w xml:id="w_1_3_1_27" lemma="facio" lemmaRef="http://lila-erc.eu/data/id/lemma/102758 http://lila-erc.eu/data/id/lemma/51124">facere </w>
@@ -625,9 +631,7 @@
                     <w xml:id="w_1_3_1_35" lemma=",">, </w>
                     <w xml:id="w_1_3_1_36" lemma="cum" lemmaRef="http://lila-erc.eu/data/id/lemma/97207 http://lila-erc.eu/data/id/lemma/97202 http://lila-erc.eu/data/id/lemma/97201">cum </w>
                     <w xml:id="w_1_3_1_37" lemma="proximus" lemmaRef="http://lila-erc.eu/data/id/lemma/120219 http://lila-erc.eu/data/id/lemma/73956">proximis </w>
-                    <objectName xmlns="" xml:id="objectName_1_3_1_38" type="ConceptualObjectReference">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_1_38" lemma="ciuitas" lemmaRef="http://lila-erc.eu/data/id/lemma/3309 http://lila-erc.eu/data/id/lemma/94400">ciuitatibus </w>
-                    </objectName>
+                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_1_38" lemma="ciuitas" lemmaRef="http://lila-erc.eu/data/id/lemma/3309 http://lila-erc.eu/data/id/lemma/94400">ciuitatibus </w>
                     <objectName xmlns="" xml:id="objectName_1_3_1_39" type="ConceptualObjectReference">
                         <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_1_39" lemma="pax" lemmaRef="http://lila-erc.eu/data/id/lemma/116322 http://lila-erc.eu/data/id/lemma/116323 http://lila-erc.eu/data/id/lemma/17849">pacem </w>
                     </objectName>
@@ -794,7 +798,9 @@
                     <w xml:id="w_1_3_6_8" lemma=",">, </w>
                     <w xml:id="w_1_3_6_9" lemma="propterea" lemmaRef="http://lila-erc.eu/data/id/lemma/120712">propterea </w>
                     <w xml:id="w_1_3_6_10" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">quod </w>
-                    <w xml:id="w_1_3_6_11" lemma="ipse" lemmaRef="http://lila-erc.eu/data/id/lemma/108945">ipse </w>
+                    <persName xmlns="" xml:id="persName_1_3_6_11" type="PersonReference" target="https://www.wikidata.org/wiki/Q458835">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_11" lemma="ipse" lemmaRef="http://lila-erc.eu/data/id/lemma/108945">ipse </w>
+                    </persName>
                     <orgName xmlns="" xml:id="orgName_1_3_6_12-13" type="CommunityReference" target="https://www.wikidata.org/wiki/Q48616">
                         <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_12" lemma="suus" lemmaRef="http://lila-erc.eu/data/id/lemma/127165">suae </w>
                         <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_13" lemma="ciuitas" lemmaRef="http://lila-erc.eu/data/id/lemma/3309 http://lila-erc.eu/data/id/lemma/94400">ciuitatis </w>
@@ -813,9 +819,7 @@
                         <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_22" lemma="totus" lemmaRef="http://lila-erc.eu/data/id/lemma/128484 http://lila-erc.eu/data/id/lemma/129429">totius </w>
                         <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_23" lemma="gallia" lemmaRef="http://lila-erc.eu/data/id/lemma/54447 http://lila-erc.eu/data/id/lemma/7760">Galliae</w>
                     </objectName>
-                    <objectName xmlns="" xml:id="objectName_1_3_6_24" type="ConceptualObjectReference">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_24" lemma="multus" lemmaRef="http://lila-erc.eu/data/id/lemma/112998">plurimum </w>
-                    </objectName>
+                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_24" lemma="multus" lemmaRef="http://lila-erc.eu/data/id/lemma/112998">plurimum </w>
                     <orgName xmlns="" xml:id="orgName_1_3_6_25" type="CommunityReference" target="https://www.wikidata.org/wiki/Q48616">
                         <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_3_6_25" lemma="heluetium">Heluetii</w>
                     </orgName>
@@ -1222,24 +1226,32 @@
                     <w xml:id="w_1_6_1_5" lemma=",">, </w>
                     <w xml:id="w_1_6_1_6" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">quibus </w>
                     <w xml:id="w_1_6_1_7" lemma="itener">itineribus </w>
-                    <w xml:id="w_1_6_1_8" lemma="domus" lemmaRef="http://lila-erc.eu/data/id/lemma/48081 http://lila-erc.eu/data/id/lemma/5235 http://lila-erc.eu/data/id/lemma/100071 http://lila-erc.eu/data/id/lemma/100070">domo </w>
+                    <objectName xmlns="" xml:id="objectName_1_6_1_8" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_1_8" lemma="domus" lemmaRef="http://lila-erc.eu/data/id/lemma/48081 http://lila-erc.eu/data/id/lemma/5235 http://lila-erc.eu/data/id/lemma/100071 http://lila-erc.eu/data/id/lemma/100070">domo </w>
+                    </objectName>
                     <w xml:id="w_1_6_1_9" lemma="exeo" lemmaRef="http://lila-erc.eu/data/id/lemma/101980">exire </w>
                     <w xml:id="w_1_6_1_10" lemma="possum" lemmaRef="http://lila-erc.eu/data/id/lemma/118569">possent </w>
                     <w xml:id="w_1_6_1_11" lemma=":">: </w>
                     <w xml:id="w_1_6_1_12" lemma="unus" lemmaRef="http://lila-erc.eu/data/id/lemma/85636">unum </w>
                     <w xml:id="w_1_6_1_13" lemma="per" lemmaRef="http://lila-erc.eu/data/id/lemma/116569">per </w>
-                    <w xml:id="w_1_6_1_14" lemma="sequanus" lemmaRef="http://lila-erc.eu/data/id/lemma/21387 http://lila-erc.eu/data/id/lemma/21386">Sequanos</w>
+                    <orgName xmlns="" xml:id="orgName_1_6_1_14" type="CommunityReference" target="https://www.wikidata.org/wiki/Q852935">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_1_14" lemma="sequanus" lemmaRef="http://lila-erc.eu/data/id/lemma/21387 http://lila-erc.eu/data/id/lemma/21386">Sequanos</w>
+                    </orgName>
                     <w xml:id="w_1_6_1_15" lemma=",">, </w>
                     <w xml:id="w_1_6_1_16" lemma="angustus" lemmaRef="http://lila-erc.eu/data/id/lemma/89054">angustum </w>
                     <w xml:id="w_1_6_1_17" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
                     <w xml:id="w_1_6_1_18" lemma="difficilis" lemmaRef="http://lila-erc.eu/data/id/lemma/99345">difficile </w>
                     <w xml:id="w_1_6_1_19" lemma=",">, </w>
                     <w xml:id="w_1_6_1_20" lemma="inter" lemmaRef="http://lila-erc.eu/data/id/lemma/108393 http://lila-erc.eu/data/id/lemma/108392">inter </w>
-                    <w xml:id="w_1_6_1_21" lemma="mons" lemmaRef="http://lila-erc.eu/data/id/lemma/112727 http://lila-erc.eu/data/id/lemma/14879">montem </w>
-                    <w xml:id="w_1_6_1_22" lemma="iura" lemmaRef="http://lila-erc.eu/data/id/lemma/60526 http://lila-erc.eu/data/id/lemma/10965">Iuram</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_1_21-22" type="PlaceReference" target="https://pleiades.stoa.org/places/177544">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_1_21" lemma="mons" lemmaRef="http://lila-erc.eu/data/id/lemma/112727 http://lila-erc.eu/data/id/lemma/14879">montem </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_1_22" lemma="iura" lemmaRef="http://lila-erc.eu/data/id/lemma/60526 http://lila-erc.eu/data/id/lemma/10965">Iuram</w>
+                    </placeName>
                     <w xml:id="w_1_6_1_23" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
-                    <w xml:id="w_1_6_1_24" lemma="flumen" lemmaRef="http://lila-erc.eu/data/id/lemma/7348 http://lila-erc.eu/data/id/lemma/7349 http://lila-erc.eu/data/id/lemma/103514">flumen </w>
-                    <w xml:id="w_1_6_1_25" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodanum</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_1_24-25" type="PlaceReference" target="https://pleiades.stoa.org/places/148168">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_1_24" lemma="flumen" lemmaRef="http://lila-erc.eu/data/id/lemma/7348 http://lila-erc.eu/data/id/lemma/7349 http://lila-erc.eu/data/id/lemma/103514">flumen </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_1_25" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodanum</w>
+                    </placeName>
                     <w xml:id="w_1_6_1_26" lemma=",">, </w>
                     <w xml:id="w_1_6_1_27" lemma="uix" lemmaRef="http://lila-erc.eu/data/id/lemma/130478">uix </w>
                     <w xml:id="w_1_6_1_28" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qua </w>
@@ -1261,8 +1273,10 @@
                     <milestone unit="section" n="2"/>
                     <w xml:id="w_1_6_2_1" lemma="alter" lemmaRef="http://lila-erc.eu/data/id/lemma/88457">Alterum</w>
                     <w xml:id="w_1_6_2_2" lemma="per" lemmaRef="http://lila-erc.eu/data/id/lemma/116569">per </w>
-                    <w xml:id="w_1_6_2_3" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
-                    <w xml:id="w_1_6_2_4" lemma="noster" lemmaRef="http://lila-erc.eu/data/id/lemma/113882 http://lila-erc.eu/data/id/lemma/15995">nostram </w>
+                    <placeName xmlns="" xml:id="placeName_1_6_2_3-4" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_2_3" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_2_4" lemma="noster" lemmaRef="http://lila-erc.eu/data/id/lemma/113882 http://lila-erc.eu/data/id/lemma/15995">nostram </w>
+                    </placeName>
                     <w xml:id="w_1_6_2_5" lemma=",">, </w>
                     <w xml:id="w_1_6_2_6" lemma="multo" lemmaRef="http://lila-erc.eu/data/id/lemma/112996 http://lila-erc.eu/data/id/lemma/66730 http://lila-erc.eu/data/id/hypolemma/111488">multo </w>
                     <w xml:id="w_1_6_2_7" lemma="faciliter" lemmaRef="http://lila-erc.eu/data/id/hypolemma/16090">facilius </w>
@@ -1272,17 +1286,23 @@
                     <w xml:id="w_1_6_2_11" lemma="propterea" lemmaRef="http://lila-erc.eu/data/id/lemma/120712">propterea </w>
                     <w xml:id="w_1_6_2_12" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">quod </w>
                     <w xml:id="w_1_6_2_13" lemma="inter" lemmaRef="http://lila-erc.eu/data/id/lemma/108393 http://lila-erc.eu/data/id/lemma/108392">inter </w>
-                    <w xml:id="w_1_6_2_14" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">fines </w>
-                    <w xml:id="w_1_6_2_15" lemma="heluetius" lemmaRef="http://lila-erc.eu/data/id/lemma/8925">Heluetiorum</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_2_14-15" type="PlaceReference" target="https://pleiades.stoa.org/places/177534">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_2_14" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">fines </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_2_15" lemma="heluetius" lemmaRef="http://lila-erc.eu/data/id/lemma/8925">Heluetiorum</w>
+                    </placeName>
                     <w xml:id="w_1_6_2_16" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
-                    <w xml:id="w_1_6_2_17" lemma="allobrogus">Allobrogum</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_2_17" type="PlaceReference" target="https://pleiades.stoa.org/places/167634">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_2_17" lemma="allobrogus">Allobrogum</w>
+                    </placeName>
                     <w xml:id="w_1_6_2_18" lemma=",">, </w>
                     <w xml:id="w_1_6_2_19" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qui </w>
                     <w xml:id="w_1_6_2_20" lemma="nuper" lemmaRef="http://lila-erc.eu/data/id/lemma/114010">nuper </w>
                     <w xml:id="w_1_6_2_21" lemma="paco" lemmaRef="http://lila-erc.eu/data/id/lemma/115591 http://lila-erc.eu/data/id/lemma/115592 http://lila-erc.eu/data/id/lemma/17186">pacati </w>
                     <w xml:id="w_1_6_2_22" lemma="sum" lemmaRef="http://lila-erc.eu/data/id/lemma/126689">erant </w>
                     <w xml:id="w_1_6_2_23" lemma=",">, </w>
-                    <w xml:id="w_1_6_2_24" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodanus</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_2_24" type="PlaceReference" target="https://pleiades.stoa.org/places/148168">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_2_24" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodanus</w>
+                    </placeName>
                     <w xml:id="w_1_6_2_25" lemma="fluo" lemmaRef="http://lila-erc.eu/data/id/lemma/103519">fluit </w>
                     <w xml:id="w_1_6_2_26" lemma="isqe">isque </w>
                     <w xml:id="w_1_6_2_27" lemma="non" lemmaRef="http://lila-erc.eu/data/id/lemma/114108">non </w>
@@ -1293,34 +1313,54 @@
                     <w xml:id="w_1_6_2_32" lemma=".">. </w>
                     <milestone unit="section" n="3"/>
                     <w xml:id="w_1_6_3_1" lemma="exterior" lemmaRef="http://lila-erc.eu/data/id/lemma/50940 http://lila-erc.eu/data/id/hypolemma/15814">Extremum</w>
-                    <w xml:id="w_1_6_3_2" lemma="oppidus">oppidum </w>
-                    <w xml:id="w_1_6_3_3" lemma="allobrogus">Allobrogum</w>
+                    <objectName xmlns="" xml:id="objectName_1_6_3_2" type="PhysicalObjectReference" target="https://www.wikidata.org/wiki/Q192601">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_2" lemma="oppidus">oppidum </w>
+                    </objectName>
+                    <orgName xmlns="" xml:id="orgName_1_6_3_3" type="CommunityReference" target="https://www.wikidata.org/wiki/Q656308">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_3" lemma="allobrogus">Allobrogum</w>
+                    </orgName>
                     <w xml:id="w_1_6_3_4" lemma="sum" lemmaRef="http://lila-erc.eu/data/id/lemma/126689">est </w>
                     <w xml:id="w_1_6_3_5" lemma="proximusque">proximumque </w>
-                    <w xml:id="w_1_6_3_6" lemma="heluetius" lemmaRef="http://lila-erc.eu/data/id/lemma/8925">Heluetiorum</w>
-                    <w xml:id="w_1_6_3_7" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">finibus </w>
-                    <w xml:id="w_1_6_3_8" lemma="genaua" lemmaRef="http://lila-erc.eu/data/id/lemma/7957">Genava</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_3_6-7" type="PlaceReference" target="https://pleiades.stoa.org/places/177534">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_6" lemma="heluetius" lemmaRef="http://lila-erc.eu/data/id/lemma/8925">Heluetiorum</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_7" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">finibus </w>
+                    </placeName>
+                    <placeName xmlns="" xml:id="placeName_1_6_3_8" type="PlaceReference" target="https://pleiades.stoa.org/places/177528">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_8" lemma="genaua" lemmaRef="http://lila-erc.eu/data/id/lemma/7957">Genava</w>
+                    </placeName>
                     <w xml:id="w_1_6_3_9" lemma=".">. </w>
                     <w xml:id="w_1_6_3_10" lemma="ex" lemmaRef="http://lila-erc.eu/data/id/lemma/101716">Ex</w>
                     <w xml:id="w_1_6_3_11" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eo </w>
-                    <w xml:id="w_1_6_3_12" lemma="oppido" lemmaRef="http://lila-erc.eu/data/id/lemma/115114">oppido </w>
-                    <w xml:id="w_1_6_3_13" lemma="pons" lemmaRef="http://lila-erc.eu/data/id/lemma/19137 http://lila-erc.eu/data/id/lemma/118415">pons </w>
+                    <objectName xmlns="" xml:id="objectName_1_6_3_12" type="PhysicalObjectReference" target="https://www.wikidata.org/wiki/Q192601">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_12" lemma="oppido" lemmaRef="http://lila-erc.eu/data/id/lemma/115114">oppido </w>
+                    </objectName>
+                    <objectName xmlns="" xml:id="objectName_1_6_3_13" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_13" lemma="pons" lemmaRef="http://lila-erc.eu/data/id/lemma/19137 http://lila-erc.eu/data/id/lemma/118415">pons </w>
+                    </objectName>
                     <w xml:id="w_1_6_3_14" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xml:id="w_1_6_3_15" lemma="heluetio">Heluetios</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_3_15" type="PlaceReference" target="https://pleiades.stoa.org/places/177534">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_15" lemma="heluetio">Heluetios</w>
+                    </placeName>
                     <w xml:id="w_1_6_3_16" lemma="pertineo" lemmaRef="http://lila-erc.eu/data/id/lemma/117404">pertinet </w>
                     <w xml:id="w_1_6_3_17" lemma=".">. </w>
-                    <w xml:id="w_1_6_3_18" lemma="allobrogus">Allobrogibus</w>
+                    <orgName xmlns="" xml:id="orgName_1_6_3_18" type="CommunityReference" target="https://www.wikidata.org/wiki/Q656308">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_18" lemma="allobrogus">Allobrogibus</w>
+                    </orgName>
                     <w xml:id="w_1_6_3_19" lemma="se" lemmaRef="http://lila-erc.eu/data/id/lemma/123932 http://lila-erc.eu/data/id/hypolemma/43031 http://lila-erc.eu/data/id/hypolemma/43567">sese </w>
                     <w xml:id="w_1_6_3_20" lemma="uel" lemmaRef="http://lila-erc.eu/data/id/lemma/129695">uel </w>
                     <w xml:id="w_1_6_3_21" lemma="persuatuo">persuasuros </w>
                     <w xml:id="w_1_6_3_22" lemma=",">, </w>
                     <w xml:id="w_1_6_3_23" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">quod </w>
                     <w xml:id="w_1_6_3_24" lemma="nondum" lemmaRef="http://lila-erc.eu/data/id/lemma/114073">nondum </w>
-                    <w xml:id="w_1_6_3_25" lemma="bonum" lemmaRef="http://lila-erc.eu/data/id/lemma/91351">bono </w>
-                    <w xml:id="w_1_6_3_26" lemma="animus" lemmaRef="http://lila-erc.eu/data/id/lemma/18060 http://lila-erc.eu/data/id/lemma/89094">animo </w>
+                    <objectName xmlns="" xml:id="objectName_1_6_3_25-26" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_25" lemma="bonum" lemmaRef="http://lila-erc.eu/data/id/lemma/91351">bono </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_26" lemma="animus" lemmaRef="http://lila-erc.eu/data/id/lemma/18060 http://lila-erc.eu/data/id/lemma/89094">animo </w>
+                    </objectName>
                     <w xml:id="w_1_6_3_27" lemma="in" lemmaRef="http://lila-erc.eu/data/id/lemma/106748">in </w>
-                    <w xml:id="w_1_6_3_28" lemma="populus" lemmaRef="http://lila-erc.eu/data/id/lemma/118463 http://lila-erc.eu/data/id/lemma/118501">populum </w>
-                    <w xml:id="w_1_6_3_29" lemma="romanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20302 http://lila-erc.eu/data/id/lemma/77200">Romanum</w>
+                    <orgName xmlns="" xml:id="orgName_1_6_3_28-29" type="CommunityReference" target="https://www.wikidata.org/wiki/Q1651392">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_28" lemma="populus" lemmaRef="http://lila-erc.eu/data/id/lemma/118463 http://lila-erc.eu/data/id/lemma/118501">populum </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_29" lemma="romanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20302 http://lila-erc.eu/data/id/lemma/77200">Romanum</w>
+                    </orgName>
                     <w xml:id="w_1_6_3_30" lemma="uideo" lemmaRef="http://lila-erc.eu/data/id/lemma/130163">uiderentur </w>
                     <w xml:id="w_1_6_3_31" lemma=",">, </w>
                     <w xml:id="w_1_6_3_32" lemma="existimo" lemmaRef="http://lila-erc.eu/data/id/lemma/102057">existimabant </w>
@@ -1329,8 +1369,10 @@
                     <w xml:id="w_1_6_3_35" lemma="cogco">coacturos </w>
                     <w xml:id="w_1_6_3_36" lemma="ut" lemmaRef="http://lila-erc.eu/data/id/lemma/130906 http://lila-erc.eu/data/id/lemma/130905">ut </w>
                     <w xml:id="w_1_6_3_37" lemma="per" lemmaRef="http://lila-erc.eu/data/id/lemma/116569">per </w>
-                    <w xml:id="w_1_6_3_38" lemma="suus" lemmaRef="http://lila-erc.eu/data/id/lemma/127165">suos </w>
-                    <w xml:id="w_1_6_3_39" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">fines </w>
+                    <placeName xmlns="" xml:id="placeName_1_6_3_38-39" type="PlaceReference" target="https://pleiades.stoa.org/places/167634">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_38" lemma="suus" lemmaRef="http://lila-erc.eu/data/id/lemma/127165">suos </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_3_39" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">fines </w>
+                    </placeName>
                     <w xml:id="w_1_6_3_40" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eos </w>
                     <w xml:id="w_1_6_3_41" lemma="eo" lemmaRef="http://lila-erc.eu/data/id/lemma/101183 http://lila-erc.eu/data/id/lemma/6054">ire </w>
                     <w xml:id="w_1_6_3_42" lemma="patior" lemmaRef="http://lila-erc.eu/data/id/lemma/116222">paterentur </w>
@@ -1339,7 +1381,9 @@
                     <w xml:id="w_1_6_4_1" lemma="omnis" lemmaRef="http://lila-erc.eu/data/id/lemma/114954">Omnibus</w>
                     <w xml:id="w_1_6_4_2" lemma="res" lemmaRef="http://lila-erc.eu/data/id/lemma/121868">rebus </w>
                     <w xml:id="w_1_6_4_3" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xml:id="w_1_6_4_4" lemma="profectio" lemmaRef="http://lila-erc.eu/data/id/lemma/119704">profectionem </w>
+                    <objectName xmlns="" xml:id="objectName_1_6_4_4" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_4" lemma="profectio" lemmaRef="http://lila-erc.eu/data/id/lemma/119704">profectionem </w>
+                    </objectName>
                     <w xml:id="w_1_6_4_5" lemma="comparo" lemmaRef="http://lila-erc.eu/data/id/lemma/95263 http://lila-erc.eu/data/id/lemma/97455">comparatis </w>
                     <w xml:id="w_1_6_4_6" lemma="dies" lemmaRef="http://lila-erc.eu/data/id/lemma/4908 http://lila-erc.eu/data/id/lemma/99334">diem </w>
                     <w xml:id="w_1_6_4_7" lemma="dico" lemmaRef="http://lila-erc.eu/data/id/lemma/99301 http://lila-erc.eu/data/id/lemma/99302">dicunt </w>
@@ -1347,38 +1391,44 @@
                     <w xml:id="w_1_6_4_9" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qua </w>
                     <w xml:id="w_1_6_4_10" lemma="dies" lemmaRef="http://lila-erc.eu/data/id/lemma/4908 http://lila-erc.eu/data/id/lemma/99334">die </w>
                     <w xml:id="w_1_6_4_11" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xml:id="w_1_6_4_12" lemma="ripa" lemmaRef="http://lila-erc.eu/data/id/lemma/20251 http://lila-erc.eu/data/id/lemma/122104">ripam </w>
-                    <w xml:id="w_1_6_4_13" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodani</w>
+                    <placeName xmlns="" xml:id="placeName_1_6_4_12-13" type="PlaceReference" target="https://pleiades.stoa.org/places/148168">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_12" lemma="ripa" lemmaRef="http://lila-erc.eu/data/id/lemma/20251 http://lila-erc.eu/data/id/lemma/122104">ripam </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_13" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodani</w>
+                    </placeName>
                     <w xml:id="w_1_6_4_14" lemma="omnis" lemmaRef="http://lila-erc.eu/data/id/lemma/114954">omnes </w>
                     <w xml:id="w_1_6_4_15" lemma="conuenio" lemmaRef="http://lila-erc.eu/data/id/lemma/96424">conueniant </w>
                     <w xml:id="w_1_6_4_16" lemma=".">. </w>
                     <w xml:id="w_1_6_4_17" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">is </w>
                     <w xml:id="w_1_6_4_18" lemma="dies" lemmaRef="http://lila-erc.eu/data/id/lemma/4908 http://lila-erc.eu/data/id/lemma/99334">dies </w>
                     <w xml:id="w_1_6_4_19" lemma="sum" lemmaRef="http://lila-erc.eu/data/id/lemma/126689">erat </w>
-                    <w xml:id="w_1_6_4_20" lemma="ab">a </w>
-                    <w xml:id="w_1_6_4_21" lemma=".">. </w>
-                    <w xml:id="w_1_6_4_22" lemma="d" lemmaRef="http://lila-erc.eu/data/id/lemma/97856 http://lila-erc.eu/data/id/lemma/98196 http://lila-erc.eu/data/id/lemma/45919 http://lila-erc.eu/data/id/lemma/4405">d </w>
-                    <w xml:id="w_1_6_4_23" lemma=".">. </w>
-                    <w xml:id="w_1_6_4_24" lemma="u" lemmaRef="http://lila-erc.eu/data/id/lemma/130986 http://lila-erc.eu/data/id/lemma/24341 http://lila-erc.eu/data/id/lemma/24593 http://lila-erc.eu/data/id/lemma/83837">V</w>
-                    <w xml:id="w_1_6_4_25" lemma=".">. </w>
-                    <w xml:id="w_1_6_4_26" lemma="kal">Kal</w>
-                    <w xml:id="w_1_6_4_27" lemma=".">. </w>
-                    <w xml:id="w_1_6_4_28" lemma="apr">Apr</w>
-                    <w xml:id="w_1_6_4_29" lemma=".">. </w>
-                    <w xml:id="w_1_6_4_30" lemma="l" lemmaRef="http://lila-erc.eu/data/id/lemma/11004 http://lila-erc.eu/data/id/lemma/109595 http://lila-erc.eu/data/id/lemma/60847">L</w>
-                    <w xml:id="w_1_6_4_31" lemma=".">. </w>
-                    <w xml:id="w_1_6_4_32" lemma="pison">Pisone</w>
-                    <w xml:id="w_1_6_4_33" lemma=",">, </w>
-                    <w xml:id="w_1_6_4_34" lemma="ab">A</w>
-                    <w xml:id="w_1_6_4_35" lemma=".">. </w>
-                    <w xml:id="w_1_6_4_36" lemma="gabinium">Gabinio</w>
-                    <w xml:id="w_1_6_4_37" lemma="consulus">consulibus </w>
+                    <date xmlns="" xml:id="date_1_6_4_20-37" type="date" target="http://datetime.hutime.org/date/1699961.5">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_20" lemma="ab">a </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_21" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_22" lemma="d" lemmaRef="http://lila-erc.eu/data/id/lemma/97856 http://lila-erc.eu/data/id/lemma/98196 http://lila-erc.eu/data/id/lemma/45919 http://lila-erc.eu/data/id/lemma/4405">d </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_23" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_24" lemma="u" lemmaRef="http://lila-erc.eu/data/id/lemma/130986 http://lila-erc.eu/data/id/lemma/24341 http://lila-erc.eu/data/id/lemma/24593 http://lila-erc.eu/data/id/lemma/83837">V</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_25" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_26" lemma="kal">Kal</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_27" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_28" lemma="apr">Apr</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_29" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_30" lemma="l" lemmaRef="http://lila-erc.eu/data/id/lemma/11004 http://lila-erc.eu/data/id/lemma/109595 http://lila-erc.eu/data/id/lemma/60847">L</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_31" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_32" lemma="pison">Pisone</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_33" lemma=",">, </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_34" lemma="ab">A</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_35" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_36" lemma="gabinium">Gabinio</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_6_4_37" lemma="consulus">consulibus </w>
+                    </date>
                     <w xml:id="w_1_6_4_38" lemma=".">. </w>
                 </p>
                 <p>
                     <milestone unit="chapter" n="7"/>
                     <milestone unit="section" n="1"/>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_1" lemma="caeso" lemmaRef="http://lila-erc.eu/data/id/lemma/1970">Caesari</w>
+                    <persName xmlns="" xml:id="persName_1_7_1_1" type="PersonReference" target="https://romanrepublic.ac.uk/person/1957">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_1" lemma="caeso" lemmaRef="http://lila-erc.eu/data/id/lemma/1970">Caesari</w>
+                    </persName>
                     <w xml:id="w_1_7_1_2" lemma="cum" lemmaRef="http://lila-erc.eu/data/id/lemma/97207 http://lila-erc.eu/data/id/lemma/97202 http://lila-erc.eu/data/id/lemma/97201">cum </w>
                     <w xml:id="w_1_7_1_3" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">id </w>
                     <w xml:id="w_1_7_1_4" lemma="nuntio" lemmaRef="http://lila-erc.eu/data/id/lemma/114008">nuntiatum </w>
@@ -1386,15 +1436,19 @@
                     <w xml:id="w_1_7_1_6" lemma=",">, </w>
                     <w xml:id="w_1_7_1_7" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eos </w>
                     <w xml:id="w_1_7_1_8" lemma="per" lemmaRef="http://lila-erc.eu/data/id/lemma/116569">per </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_9" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_10" lemma="noster" lemmaRef="http://lila-erc.eu/data/id/lemma/113882 http://lila-erc.eu/data/id/lemma/15995">nostram </w>
+                    <placeName xmlns="" xml:id="placeName_1_7_1_9-10" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_9" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_10" lemma="noster" lemmaRef="http://lila-erc.eu/data/id/lemma/113882 http://lila-erc.eu/data/id/lemma/15995">nostram </w>
+                    </placeName>
                     <w xml:id="w_1_7_1_11" lemma="iter" lemmaRef="http://lila-erc.eu/data/id/lemma/109132">iter </w>
                     <w xml:id="w_1_7_1_12" lemma="facio" lemmaRef="http://lila-erc.eu/data/id/lemma/102758 http://lila-erc.eu/data/id/lemma/51124">facere </w>
                     <w xml:id="w_1_7_1_13" lemma="conor" lemmaRef="http://lila-erc.eu/data/id/lemma/95962">conari </w>
                     <w xml:id="w_1_7_1_14" lemma=",">, </w>
                     <w xml:id="w_1_7_1_15" lemma="maturo" lemmaRef="http://lila-erc.eu/data/id/lemma/111740">maturat </w>
                     <w xml:id="w_1_7_1_16" lemma="ab">ab </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_17" lemma="urbs" lemmaRef="http://lila-erc.eu/data/id/lemma/24503 http://lila-erc.eu/data/id/lemma/24502 http://lila-erc.eu/data/id/lemma/130822">urbe </w>
+                    <placeName xmlns="" xml:id="placeName_1_7_1_17" type="PlaceReference" target="https://pleiades.stoa.org/places/423025">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_17" lemma="urbs" lemmaRef="http://lila-erc.eu/data/id/lemma/24503 http://lila-erc.eu/data/id/lemma/24502 http://lila-erc.eu/data/id/lemma/130822">urbe </w>
+                    </placeName>
                     <w xml:id="w_1_7_1_18" lemma="proficiscor" lemmaRef="http://lila-erc.eu/data/id/lemma/119713">proficisci </w>
                     <w xml:id="w_1_7_1_19" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
                     <w xml:id="w_1_7_1_20" lemma="quam" lemmaRef="http://lila-erc.eu/data/id/lemma/74492">quam </w>
@@ -1402,37 +1456,53 @@
                     <w xml:id="w_1_7_1_22" lemma="possum" lemmaRef="http://lila-erc.eu/data/id/lemma/118569">potest </w>
                     <w xml:id="w_1_7_1_23" lemma="itener">itineribus </w>
                     <w xml:id="w_1_7_1_24" lemma="in" lemmaRef="http://lila-erc.eu/data/id/lemma/106748">in </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_25" lemma="gallia" lemmaRef="http://lila-erc.eu/data/id/lemma/54447 http://lila-erc.eu/data/id/lemma/7760">Galliam </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_26" lemma="ultimus" lemmaRef="http://lila-erc.eu/data/id/lemma/130507">ulteriorem </w>
+                    <placeName xmlns="" xml:id="placeName_1_7_1_25-26" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_25" lemma="gallia" lemmaRef="http://lila-erc.eu/data/id/lemma/54447 http://lila-erc.eu/data/id/lemma/7760">Galliam </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_26" lemma="ultimus" lemmaRef="http://lila-erc.eu/data/id/lemma/130507">ulteriorem </w>
+                    </placeName>
                     <w xml:id="w_1_7_1_27" lemma="contendo" lemmaRef="http://lila-erc.eu/data/id/lemma/96251">contendit </w>
                     <w xml:id="w_1_7_1_28" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
                     <w xml:id="w_1_7_1_29" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_30" lemma="genauus">Genauam</w>
+                    <placeName xmlns="" xml:id="placeName_1_7_1_30" type="PlaceReference" target="https://pleiades.stoa.org/places/177528">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_1_30" lemma="genauus">Genauam</w>
+                    </placeName>
                     <w xml:id="w_1_7_1_31" lemma="peruenio" lemmaRef="http://lila-erc.eu/data/id/lemma/117445">peruenit </w>
                     <w xml:id="w_1_7_1_32" lemma=".">. </w>
                     <milestone unit="section" n="2"/>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_1" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">Prouinciae</w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_2" lemma="totus" lemmaRef="http://lila-erc.eu/data/id/lemma/128484 http://lila-erc.eu/data/id/lemma/129429">toti </w>
+                    <placeName xmlns="" xml:id="placeName_1_7_2_1-2" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_1" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">Prouinciae</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_2" lemma="totus" lemmaRef="http://lila-erc.eu/data/id/lemma/128484 http://lila-erc.eu/data/id/lemma/129429">toti </w>
+                    </placeName>
                     <w xml:id="w_1_7_2_3" lemma="quam" lemmaRef="http://lila-erc.eu/data/id/lemma/74492">quam </w>
                     <w xml:id="w_1_7_2_4" lemma="magnus" lemmaRef="http://lila-erc.eu/data/id/lemma/111319 http://lila-erc.eu/data/id/lemma/63184">maximum </w>
                     <w xml:id="w_1_7_2_5" lemma="possum" lemmaRef="http://lila-erc.eu/data/id/lemma/118569">potest </w>
-                    <w xml:id="w_1_7_2_6" lemma="miles" lemmaRef="http://lila-erc.eu/data/id/lemma/14557 http://lila-erc.eu/data/id/lemma/112318">militum </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_2_6" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_6" lemma="miles" lemmaRef="http://lila-erc.eu/data/id/lemma/14557 http://lila-erc.eu/data/id/lemma/112318">militum </w>
+                    </objectName>
                     <w xml:id="w_1_7_2_7" lemma="numerus" lemmaRef="http://lila-erc.eu/data/id/lemma/113981">numerum </w>
                     <w xml:id="w_1_7_2_8" lemma="impero" lemmaRef="http://lila-erc.eu/data/id/lemma/106539">imperat </w>
                     <w xml:id="w_1_7_2_9" lemma="(">(erat </w>
                     <w xml:id="w_1_7_2_10" lemma="omnino" lemmaRef="http://lila-erc.eu/data/id/lemma/114945">omnino </w>
                     <w xml:id="w_1_7_2_11" lemma="in" lemmaRef="http://lila-erc.eu/data/id/lemma/106748">in </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_12" lemma="gallia" lemmaRef="http://lila-erc.eu/data/id/lemma/54447 http://lila-erc.eu/data/id/lemma/7760">Gallia</w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_13" lemma="ulterior" lemmaRef="http://lila-erc.eu/data/id/lemma/130505">ulteriore </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_14" lemma="legium" lemmaRef="http://lila-erc.eu/data/id/lemma/61770">legio </w>
+                    <placeName xmlns="" xml:id="placeName_1_7_2_12-13" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_12" lemma="gallia" lemmaRef="http://lila-erc.eu/data/id/lemma/54447 http://lila-erc.eu/data/id/lemma/7760">Gallia</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_13" lemma="ulterior" lemmaRef="http://lila-erc.eu/data/id/lemma/130505">ulteriore </w>
+                    </placeName>
+                    <objectName xmlns="" xml:id="objectName_1_7_2_14" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_14" lemma="legium" lemmaRef="http://lila-erc.eu/data/id/lemma/61770">legio </w>
+                    </objectName>
                     <w xml:id="w_1_7_2_15" lemma="unus" lemmaRef="http://lila-erc.eu/data/id/lemma/85636">una) </w>
                     <w xml:id="w_1_7_2_16" lemma=",">, </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_17" lemma="pons" lemmaRef="http://lila-erc.eu/data/id/lemma/19137 http://lila-erc.eu/data/id/lemma/118415">pontem </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_2_17" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_17" lemma="pons" lemmaRef="http://lila-erc.eu/data/id/lemma/19137 http://lila-erc.eu/data/id/lemma/118415">pontem </w>
+                    </objectName>
                     <w xml:id="w_1_7_2_18" lemma=",">, </w>
                     <w xml:id="w_1_7_2_19" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qui </w>
                     <w xml:id="w_1_7_2_20" lemma="sum" lemmaRef="http://lila-erc.eu/data/id/lemma/126689">erat </w>
                     <w xml:id="w_1_7_2_21" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_22" lemma="genauus">Genauam</w>
+                    <placeName xmlns="" xml:id="placeName_1_7_2_22" type="PlaceReference" target="https://pleiades.stoa.org/places/177528">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_2_22" lemma="genauus">Genauam</w>
+                    </placeName>
                     <w xml:id="w_1_7_2_23" lemma=",">, </w>
                     <w xml:id="w_1_7_2_24" lemma="iubeo" lemmaRef="http://lila-erc.eu/data/id/lemma/109152">iubet </w>
                     <w xml:id="w_1_7_2_25" lemma="rescindo" lemmaRef="http://lila-erc.eu/data/id/lemma/122708">rescindi </w>
@@ -1440,26 +1510,48 @@
                     <milestone unit="section" n="3"/>
                     <w xml:id="w_1_7_3_1" lemma="ubi" lemmaRef="http://lila-erc.eu/data/id/lemma/129639">Ubi</w>
                     <w xml:id="w_1_7_3_2" lemma="de" lemmaRef="http://lila-erc.eu/data/id/lemma/97932">de </w>
-                    <w xml:id="w_1_7_3_3" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eius </w>
-                    <w xml:id="w_1_7_3_4" lemma="aduentus" lemmaRef="http://lila-erc.eu/data/id/lemma/4679 http://lila-erc.eu/data/id/lemma/91028">aduentu </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_5" lemma="heluetium">Heluetii</w>
+                    <persName xmlns="" xml:id="persName_1_7_3_3" type="PersonReference" target="http://romanrepublic.ac.uk/rdf/entity/Person/1957">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_3" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eius </w>
+                    </persName>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_4" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_4" lemma="aduentus" lemmaRef="http://lila-erc.eu/data/id/lemma/4679 http://lila-erc.eu/data/id/lemma/91028">aduentu </w>
+                    </objectName>
+                    <orgName xmlns="" xml:id="orgName_1_7_3_5" type="CommunityReference" target="https://www.wikidata.org/wiki/Q48616">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_5" lemma="heluetium">Heluetii</w>
+                    </orgName>
                     <w xml:id="w_1_7_3_6" lemma="certus" lemmaRef="http://lila-erc.eu/data/id/lemma/93581">certiores </w>
                     <w xml:id="w_1_7_3_7" lemma="facio" lemmaRef="http://lila-erc.eu/data/id/lemma/102758 http://lila-erc.eu/data/id/lemma/51124">facti </w>
                     <w xml:id="w_1_7_3_8" lemma="sum" lemmaRef="http://lila-erc.eu/data/id/lemma/126689">sunt </w>
                     <w xml:id="w_1_7_3_9" lemma=",">, </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_10" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legatos </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_10" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_10" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legatos </w>
+                    </objectName>
                     <w xml:id="w_1_7_3_11" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xml:id="w_1_7_3_12" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eum </w>
+                    <persName xmlns="" xml:id="persName_1_7_3_12" type="PersonReference" target="http://romanrepublic.ac.uk/rdf/entity/Person/1957">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_12" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eum </w>
+                    </persName>
                     <w xml:id="w_1_7_3_13" lemma="mitto" lemmaRef="http://lila-erc.eu/data/id/lemma/112499 http://lila-erc.eu/data/id/lemma/65912">mittunt </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_14" lemma="nobilis" lemmaRef="http://lila-erc.eu/data/id/lemma/113751 http://lila-erc.eu/data/id/lemma/15920">nobilissimos </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_15" lemma="ciuitas" lemmaRef="http://lila-erc.eu/data/id/lemma/3309 http://lila-erc.eu/data/id/lemma/94400">ciuitatis </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_14" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_14" lemma="nobilis" lemmaRef="http://lila-erc.eu/data/id/lemma/113751 http://lila-erc.eu/data/id/lemma/15920">nobilissimos </w>
+                    </objectName>
+                    <orgName xmlns="" xml:id="orgName_1_7_3_15" type="CommunityReference" target="https://www.wikidata.org/wiki/Q48616">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_15" lemma="ciuitas" lemmaRef="http://lila-erc.eu/data/id/lemma/3309 http://lila-erc.eu/data/id/lemma/94400">ciuitatis </w>
+                    </orgName>
                     <w xml:id="w_1_7_3_16" lemma=",">, </w>
                     <w xml:id="w_1_7_3_17" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">cuius </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_18" lemma="legatio" lemmaRef="http://lila-erc.eu/data/id/lemma/110156">legationis </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_19" lemma="nammes">Nammeius</w>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_18" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_18" lemma="legatio" lemmaRef="http://lila-erc.eu/data/id/lemma/110156">legationis </w>
+                    </objectName>
+                    <persName xmlns="" xml:id="persName_1_7_3_19" type="PersonReference" target="https://www.wikidata.org/wiki/Q1650112">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_19" lemma="nammes">Nammeius</w>
+                    </persName>
                     <w xml:id="w_1_7_3_20" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_21" lemma="ueruclo">Verucloetius</w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_22" lemma="princeps" lemmaRef="http://lila-erc.eu/data/id/lemma/119499 http://lila-erc.eu/data/id/lemma/73416">principem </w>
+                    <persName xmlns="" xml:id="persName_1_7_3_21" type="PersonReference" target="https://www.wikidata.org/wiki/Q3556281">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_21" lemma="ueruclo">Verucloetius</w>
+                    </persName>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_22" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_22" lemma="princeps" lemmaRef="http://lila-erc.eu/data/id/lemma/119499 http://lila-erc.eu/data/id/lemma/73416">principem </w>
+                    </objectName>
                     <w xml:id="w_1_7_3_23" lemma="locus" lemmaRef="http://lila-erc.eu/data/id/lemma/12215 http://lila-erc.eu/data/id/lemma/110019">locum </w>
                     <w xml:id="w_1_7_3_24" lemma="obtineo" lemmaRef="http://lila-erc.eu/data/id/lemma/114504">obtinebant </w>
                     <w xml:id="w_1_7_3_25" lemma=",">, </w>
@@ -1471,10 +1563,14 @@
                     <w xml:id="w_1_7_3_31" lemma="animus" lemmaRef="http://lila-erc.eu/data/id/lemma/18060 http://lila-erc.eu/data/id/lemma/89094">animo </w>
                     <w xml:id="w_1_7_3_32" lemma="sine" lemmaRef="http://lila-erc.eu/data/id/lemma/124883">sine </w>
                     <w xml:id="w_1_7_3_33" lemma="ullus" lemmaRef="http://lila-erc.eu/data/id/lemma/130494">ullo </w>
-                    <w xml:id="w_1_7_3_34" lemma="maleficium" lemmaRef="http://lila-erc.eu/data/id/lemma/111370">maleficio </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_34" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_34" lemma="maleficium" lemmaRef="http://lila-erc.eu/data/id/lemma/111370">maleficio </w>
+                    </objectName>
                     <w xml:id="w_1_7_3_35" lemma="iter" lemmaRef="http://lila-erc.eu/data/id/lemma/109132">iter </w>
                     <w xml:id="w_1_7_3_36" lemma="per" lemmaRef="http://lila-erc.eu/data/id/lemma/116569">per </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_37" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
+                    <placeName xmlns="" xml:id="placeName_1_7_3_37" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_37" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
+                    </placeName>
                     <w xml:id="w_1_7_3_38" lemma="facio" lemmaRef="http://lila-erc.eu/data/id/lemma/102758 http://lila-erc.eu/data/id/lemma/51124">facere </w>
                     <w xml:id="w_1_7_3_39" lemma=",">, </w>
                     <w xml:id="w_1_7_3_40" lemma="propterea" lemmaRef="http://lila-erc.eu/data/id/lemma/120712">propterea </w>
@@ -1486,31 +1582,49 @@
                     <w xml:id="w_1_7_3_46" lemma=":">: </w>
                     <w xml:id="w_1_7_3_47" lemma="rogo" lemmaRef="http://lila-erc.eu/data/id/lemma/122853 http://lila-erc.eu/data/id/lemma/77157">rogare </w>
                     <w xml:id="w_1_7_3_48" lemma="ut" lemmaRef="http://lila-erc.eu/data/id/lemma/130906 http://lila-erc.eu/data/id/lemma/130905">ut </w>
-                    <w xml:id="w_1_7_3_49" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eius </w>
-                    <w xml:id="w_1_7_3_50" lemma="uoluntas" lemmaRef="http://lila-erc.eu/data/id/lemma/130763">uoluntate </w>
+                    <persName xmlns="" xml:id="persName_1_7_3_49" type="PersonReference" target="http://romanrepublic.ac.uk/rdf/entity/Person/1957">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_49" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eius </w>
+                    </persName>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_50" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_50" lemma="uoluntas" lemmaRef="http://lila-erc.eu/data/id/lemma/130763">uoluntate </w>
+                    </objectName>
                     <w xml:id="w_1_7_3_51" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">id </w>
                     <w xml:id="w_1_7_3_52" lemma="se" lemmaRef="http://lila-erc.eu/data/id/lemma/123932 http://lila-erc.eu/data/id/hypolemma/43031 http://lila-erc.eu/data/id/hypolemma/43567">sibi </w>
                     <w xml:id="w_1_7_3_53" lemma="facio" lemmaRef="http://lila-erc.eu/data/id/lemma/102758 http://lila-erc.eu/data/id/lemma/51124">facere </w>
                     <w xml:id="w_1_7_3_54" lemma="licet" lemmaRef="http://lila-erc.eu/data/id/lemma/110432">liceat </w>
                     <w xml:id="w_1_7_3_55" lemma=".">. </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_56" lemma="caesar" lemmaRef="http://lila-erc.eu/data/id/lemma/37952 http://lila-erc.eu/data/id/lemma/1948 http://lila-erc.eu/data/id/lemma/1947">Caesar</w>
+                    <persName xmlns="" xml:id="persName_1_7_3_56" type="PersonReference" target="http://romanrepublic.ac.uk/rdf/entity/Person/1957">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_56" lemma="caesar" lemmaRef="http://lila-erc.eu/data/id/lemma/37952 http://lila-erc.eu/data/id/lemma/1948 http://lila-erc.eu/data/id/lemma/1947">Caesar</w>
+                    </persName>
                     <w xml:id="w_1_7_3_57" lemma=",">, </w>
                     <w xml:id="w_1_7_3_58" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">quod </w>
-                    <w xml:id="w_1_7_3_59" lemma="memoria" lemmaRef="http://lila-erc.eu/data/id/lemma/14151 http://lila-erc.eu/data/id/lemma/112000">memoria </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_59" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_59" lemma="memoria" lemmaRef="http://lila-erc.eu/data/id/lemma/14151 http://lila-erc.eu/data/id/lemma/112000">memoria </w>
+                    </objectName>
                     <w xml:id="w_1_7_3_60" lemma="teneo" lemmaRef="http://lila-erc.eu/data/id/lemma/127822">tenebat </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_61" lemma="l" lemmaRef="http://lila-erc.eu/data/id/lemma/11004 http://lila-erc.eu/data/id/lemma/109595 http://lila-erc.eu/data/id/lemma/60847">L</w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_62" lemma=".">. </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_63" lemma="cassius" lemmaRef="http://lila-erc.eu/data/id/lemma/2540">Cassium</w>
+                    <persName xmlns="" xml:id="persName_1_7_3_61-63" type="PersonReference" target="http://romanrepublic.ac.uk/rdf/entity/Person/1715">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_61" lemma="l" lemmaRef="http://lila-erc.eu/data/id/lemma/11004 http://lila-erc.eu/data/id/lemma/109595 http://lila-erc.eu/data/id/lemma/60847">L</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_62" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_63" lemma="cassius" lemmaRef="http://lila-erc.eu/data/id/lemma/2540">Cassium</w>
+                    </persName>
                     <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_64" lemma="consul" lemmaRef="http://lila-erc.eu/data/id/lemma/96181">consulem </w>
                     <w xml:id="w_1_7_3_65" lemma="occido" lemmaRef="http://lila-erc.eu/data/id/lemma/114585 http://lila-erc.eu/data/id/lemma/114586">occisum </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_66" lemma="exercitus" lemmaRef="http://lila-erc.eu/data/id/hypolemma/15154 http://lila-erc.eu/data/id/lemma/101960">exercitumque </w>
-                    <w xml:id="w_1_7_3_67" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eius </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_66" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_66" lemma="exercitus" lemmaRef="http://lila-erc.eu/data/id/hypolemma/15154 http://lila-erc.eu/data/id/lemma/101960">exercitumque </w>
+                    </objectName>
+                    <persName xmlns="" xml:id="persName_1_7_3_67" type="PersonReference" target="http://romanrepublic.ac.uk/rdf/entity/Person/1715">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_67" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eius </w>
+                    </persName>
                     <w xml:id="w_1_7_3_68" lemma="ab">ab </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_69" lemma="heluetia" lemmaRef="http://lila-erc.eu/data/id/lemma/8924">Heluetiis</w>
+                    <orgName xmlns="" xml:id="orgName_1_7_3_69" type="CommunityReference" target="https://www.wikidata.org/wiki/Q48616">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_69" lemma="heluetia" lemmaRef="http://lila-erc.eu/data/id/lemma/8924">Heluetiis</w>
+                    </orgName>
                     <w xml:id="w_1_7_3_70" lemma="pulgo">pulsum </w>
                     <w xml:id="w_1_7_3_71" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
                     <w xml:id="w_1_7_3_72" lemma="sub" lemmaRef="http://lila-erc.eu/data/id/lemma/125956 http://lila-erc.eu/data/id/lemma/82744">sub </w>
-                    <w xml:id="w_1_7_3_73" lemma="iugum" lemmaRef="http://lila-erc.eu/data/id/lemma/109202">iugum </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_3_73" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_3_73" lemma="iugum" lemmaRef="http://lila-erc.eu/data/id/lemma/109202">iugum </w>
+                    </objectName>
                     <w xml:id="w_1_7_3_74" lemma="mitto" lemmaRef="http://lila-erc.eu/data/id/lemma/112499 http://lila-erc.eu/data/id/lemma/65912">missum </w>
                     <w xml:id="w_1_7_3_75" lemma=",">, </w>
                     <w xml:id="w_1_7_3_76" lemma="concedo" lemmaRef="http://lila-erc.eu/data/id/lemma/95456">concedendum </w>
@@ -1520,21 +1634,31 @@
                     <milestone unit="section" n="4"/>
                     <w xml:id="w_1_7_4_1" lemma="neque" lemmaRef="http://lila-erc.eu/data/id/lemma/114120 http://lila-erc.eu/data/id/lemma/114119">Neque</w>
                     <w xml:id="w_1_7_4_2" lemma="homo" lemmaRef="http://lila-erc.eu/data/id/lemma/9484 http://lila-erc.eu/data/id/lemma/105624">homines </w>
-                    <w xml:id="w_1_7_4_3" lemma="inimicus" lemmaRef="http://lila-erc.eu/data/id/lemma/107882">inimico </w>
-                    <w xml:id="w_1_7_4_4" lemma="animus" lemmaRef="http://lila-erc.eu/data/id/lemma/18060 http://lila-erc.eu/data/id/lemma/89094">animo </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_4_3-4" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_4_3" lemma="inimicus" lemmaRef="http://lila-erc.eu/data/id/lemma/107882">inimico </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_4_4" lemma="animus" lemmaRef="http://lila-erc.eu/data/id/lemma/18060 http://lila-erc.eu/data/id/lemma/89094">animo </w>
+                    </objectName>
                     <w xml:id="w_1_7_4_5" lemma=",">, </w>
                     <w xml:id="w_1_7_4_6" lemma="do" lemmaRef="http://lila-erc.eu/data/id/lemma/99970">data </w>
-                    <w xml:id="w_1_7_4_7" lemma="facultas" lemmaRef="http://lila-erc.eu/data/id/lemma/102776 http://lila-erc.eu/data/id/lemma/7007">facultate </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_4_7" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_4_7" lemma="facultas" lemmaRef="http://lila-erc.eu/data/id/lemma/102776 http://lila-erc.eu/data/id/lemma/7007">facultate </w>
+                    </objectName>
                     <w xml:id="w_1_7_4_8" lemma="per" lemmaRef="http://lila-erc.eu/data/id/lemma/116569">per </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_4_9" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam</w>
+                    <placeName xmlns="" xml:id="placeName_1_7_4_9" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_4_9" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam</w>
+                    </placeName>
                     <w xml:id="w_1_7_4_10" lemma="iter" lemmaRef="http://lila-erc.eu/data/id/lemma/109132">itineris </w>
                     <w xml:id="w_1_7_4_11" lemma="facio" lemmaRef="http://lila-erc.eu/data/id/lemma/102758 http://lila-erc.eu/data/id/lemma/51124">faciundi </w>
                     <w xml:id="w_1_7_4_12" lemma=",">, </w>
                     <w xml:id="w_1_7_4_13" lemma="tempero" lemmaRef="http://lila-erc.eu/data/id/lemma/127773">temperaturos </w>
                     <w xml:id="w_1_7_4_14" lemma="ab">ab </w>
-                    <w xml:id="w_1_7_4_15" lemma="iniurius" lemmaRef="http://lila-erc.eu/data/id/lemma/107913">iniuria </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_4_15" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_4_15" lemma="iniurius" lemmaRef="http://lila-erc.eu/data/id/lemma/107913">iniuria </w>
+                    </objectName>
                     <w xml:id="w_1_7_4_16" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
-                    <w xml:id="w_1_7_4_17" lemma="maleficium" lemmaRef="http://lila-erc.eu/data/id/lemma/111370">maleficio </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_4_17" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_4_17" lemma="maleficium" lemmaRef="http://lila-erc.eu/data/id/lemma/111370">maleficio </w>
+                    </objectName>
                     <w xml:id="w_1_7_4_18" lemma="existimo" lemmaRef="http://lila-erc.eu/data/id/lemma/102057">existimabat </w>
                     <w xml:id="w_1_7_4_19" lemma=".">. </w>
                     <milestone unit="section" n="5"/>
@@ -1545,12 +1669,16 @@
                     <w xml:id="w_1_7_5_5" lemma="intercedo" lemmaRef="http://lila-erc.eu/data/id/lemma/108419">intercedere </w>
                     <w xml:id="w_1_7_5_6" lemma="possum" lemmaRef="http://lila-erc.eu/data/id/lemma/118569">posset </w>
                     <w xml:id="w_1_7_5_7" lemma="dum" lemmaRef="http://lila-erc.eu/data/id/lemma/100236">dum </w>
-                    <w xml:id="w_1_7_5_8" lemma="miles" lemmaRef="http://lila-erc.eu/data/id/lemma/14557 http://lila-erc.eu/data/id/lemma/112318">milites </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_5_8" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_5_8" lemma="miles" lemmaRef="http://lila-erc.eu/data/id/lemma/14557 http://lila-erc.eu/data/id/lemma/112318">milites </w>
+                    </objectName>
                     <w xml:id="w_1_7_5_9" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">quos </w>
                     <w xml:id="w_1_7_5_10" lemma="impero" lemmaRef="http://lila-erc.eu/data/id/lemma/106539">imperauerat </w>
                     <w xml:id="w_1_7_5_11" lemma="conuenio" lemmaRef="http://lila-erc.eu/data/id/lemma/96424">conuenirent </w>
                     <w xml:id="w_1_7_5_12" lemma=",">, </w>
-                    <w xml:id="w_1_7_5_13" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legatis </w>
+                    <objectName xmlns="" xml:id="objectName_1_7_5_13" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_5_13" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legatis </w>
+                    </objectName>
                     <w xml:id="w_1_7_5_14" lemma="respondeo" lemmaRef="http://lila-erc.eu/data/id/lemma/122740">respondit </w>
                     <w xml:id="w_1_7_5_15" lemma="dies" lemmaRef="http://lila-erc.eu/data/id/lemma/4908 http://lila-erc.eu/data/id/lemma/99334">diem </w>
                     <w xml:id="w_1_7_5_16" lemma="se" lemmaRef="http://lila-erc.eu/data/id/lemma/123932 http://lila-erc.eu/data/id/hypolemma/43031 http://lila-erc.eu/data/id/hypolemma/43567">se </w>
@@ -1563,9 +1691,11 @@
                     <w xml:id="w_1_7_5_23" lemma="uolo" lemmaRef="http://lila-erc.eu/data/id/lemma/130746 http://lila-erc.eu/data/id/lemma/130745 http://lila-erc.eu/data/id/lemma/130747">uellent </w>
                     <w xml:id="w_1_7_5_24" lemma=",">, </w>
                     <w xml:id="w_1_7_5_25" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xml:id="w_1_7_5_26" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">Id</w>
-                    <w xml:id="w_1_7_5_27" lemma=".">. </w>
-                    <w xml:id="w_1_7_5_28" lemma="april">April</w>
+                    <date xmlns="" xml:id="date_1_7_5_26-28" type="date" target="http://datetime.hutime.org/date/1699977.5">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_5_26" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">Id</w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_5_27" lemma=".">. </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_7_5_28" lemma="april">April</w>
+                    </date>
                     <w xml:id="w_1_7_5_29" lemma=".">. </w>
                     <w xml:id="w_1_7_5_30" lemma="reuertor" lemmaRef="http://lila-erc.eu/data/id/lemma/122808">reuerterentur </w>
                     <w xml:id="w_1_7_5_31" lemma=".">. </w>
@@ -1575,48 +1705,68 @@
                     <milestone unit="section" n="1"/>
                     <w xml:id="w_1_8_1_1" lemma="intereum">Interea</w>
                     <w xml:id="w_1_8_1_2" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">ea </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_3" lemma="legio" lemmaRef="http://lila-erc.eu/data/id/lemma/110166 http://lila-erc.eu/data/id/lemma/11631">legione </w>
+                    <objectName xmlns="" xml:id="objectName_1_8_1_3" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_3" lemma="legio" lemmaRef="http://lila-erc.eu/data/id/lemma/110166 http://lila-erc.eu/data/id/lemma/11631">legione </w>
+                    </objectName>
                     <w xml:id="w_1_8_1_4" lemma="quam" lemmaRef="http://lila-erc.eu/data/id/lemma/74492">quam </w>
                     <w xml:id="w_1_8_1_5" lemma="se" lemmaRef="http://lila-erc.eu/data/id/lemma/123932 http://lila-erc.eu/data/id/hypolemma/43031 http://lila-erc.eu/data/id/hypolemma/43567">secum </w>
                     <w xml:id="w_1_8_1_6" lemma="habeo" lemmaRef="http://lila-erc.eu/data/id/lemma/105044">habebat </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_7" lemma="miletis">militibusque </w>
+                    <objectName xmlns="" xml:id="objectName_1_8_1_7" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_7" lemma="miletis">militibusque </w>
+                    </objectName>
                     <w xml:id="w_1_8_1_8" lemma=",">, </w>
                     <w xml:id="w_1_8_1_9" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qui </w>
                     <w xml:id="w_1_8_1_10" lemma="ex" lemmaRef="http://lila-erc.eu/data/id/lemma/101716">ex </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_11" lemma="prouincium">prouincia </w>
+                    <placeName xmlns="" xml:id="placeName_1_8_1_11" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_11" lemma="prouincium">prouincia </w>
+                    </placeName>
                     <w xml:id="w_1_8_1_12" lemma="conuenio" lemmaRef="http://lila-erc.eu/data/id/lemma/96424">conuenerant </w>
                     <w xml:id="w_1_8_1_13" lemma=",">, </w>
                     <w xml:id="w_1_8_1_14" lemma="ab">a </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_15" lemma="lacus" lemmaRef="http://lila-erc.eu/data/id/lemma/11105 http://lila-erc.eu/data/id/lemma/110374 http://lila-erc.eu/data/id/lemma/110370">lacu </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_16" lemma="lemannum">Lemanno</w>
+                    <placeName xmlns="" xml:id="placeName_1_8_1_15-16" type="PlaceReference" target="https://pleiades.stoa.org/places/177555">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_15" lemma="lacus" lemmaRef="http://lila-erc.eu/data/id/lemma/11105 http://lila-erc.eu/data/id/lemma/110374 http://lila-erc.eu/data/id/lemma/110370">lacu </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_16" lemma="lemannum">Lemanno</w>
+                    </placeName>
                     <w xml:id="w_1_8_1_17" lemma=",">, </w>
                     <w xml:id="w_1_8_1_18" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qui </w>
                     <w xml:id="w_1_8_1_19" lemma="in" lemmaRef="http://lila-erc.eu/data/id/lemma/106748">in </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_20" lemma="flumen" lemmaRef="http://lila-erc.eu/data/id/lemma/7348 http://lila-erc.eu/data/id/lemma/7349 http://lila-erc.eu/data/id/lemma/103514">flumen </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_21" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodanum</w>
+                    <placeName xmlns="" xml:id="placeName_1_8_1_20-21" type="PlaceReference" target="https://pleiades.stoa.org/places/148168">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_20" lemma="flumen" lemmaRef="http://lila-erc.eu/data/id/lemma/7348 http://lila-erc.eu/data/id/lemma/7349 http://lila-erc.eu/data/id/lemma/103514">flumen </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_21" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodanum</w>
+                    </placeName>
                     <w xml:id="w_1_8_1_22" lemma="influo" lemmaRef="http://lila-erc.eu/data/id/lemma/107724">influit </w>
                     <w xml:id="w_1_8_1_23" lemma=",">, </w>
                     <w xml:id="w_1_8_1_24" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_25" lemma="mons" lemmaRef="http://lila-erc.eu/data/id/lemma/112727 http://lila-erc.eu/data/id/lemma/14879">montem </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_26" lemma="iura" lemmaRef="http://lila-erc.eu/data/id/lemma/60526 http://lila-erc.eu/data/id/lemma/10965">Iuram</w>
+                    <placeName xmlns="" xml:id="placeName_1_8_1_25-26" type="PlaceReference" target="https://pleiades.stoa.org/places/177544">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_25" lemma="mons" lemmaRef="http://lila-erc.eu/data/id/lemma/112727 http://lila-erc.eu/data/id/lemma/14879">montem </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_26" lemma="iura" lemmaRef="http://lila-erc.eu/data/id/lemma/60526 http://lila-erc.eu/data/id/lemma/10965">Iuram</w>
+                    </placeName>
                     <w xml:id="w_1_8_1_27" lemma=",">, </w>
                     <w xml:id="w_1_8_1_28" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qui </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_29" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">fines </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_30" lemma="sequanus" lemmaRef="http://lila-erc.eu/data/id/lemma/21387 http://lila-erc.eu/data/id/lemma/21386">Sequanorum</w>
+                    <placeName xmlns="" xml:id="placeName_1_8_1_29-30" type="PlaceReference" target="https://pleiades.stoa.org/places/167922">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_29" lemma="finis" lemmaRef="http://lila-erc.eu/data/id/lemma/103321 http://lila-erc.eu/data/id/lemma/52244">fines </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_30" lemma="sequanus" lemmaRef="http://lila-erc.eu/data/id/lemma/21387 http://lila-erc.eu/data/id/lemma/21386">Sequanorum</w>
+                    </placeName>
                     <w xml:id="w_1_8_1_31" lemma="ab">ab </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_32" lemma="heluetia" lemmaRef="http://lila-erc.eu/data/id/lemma/8924">Heluetiis</w>
+                    <placeName xmlns="" xml:id="placeName_1_8_1_32" type="PlaceReference" target="https://pleiades.stoa.org/places/177534">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_32" lemma="heluetia" lemmaRef="http://lila-erc.eu/data/id/lemma/8924">Heluetiis</w>
+                    </placeName>
                     <w xml:id="w_1_8_1_33" lemma="diuido" lemmaRef="http://lila-erc.eu/data/id/lemma/99932">diuidit </w>
                     <w xml:id="w_1_8_1_34" lemma=",">, </w>
                     <w xml:id="w_1_8_1_35" lemma="mile" lemmaRef="http://lila-erc.eu/data/id/lemma/14556">milia </w>
                     <w xml:id="w_1_8_1_36" lemma="passus" lemmaRef="http://lila-erc.eu/data/id/lemma/120855 http://lila-erc.eu/data/id/hypolemma/31215">passuum </w>
                     <w xml:id="w_1_8_1_37" lemma="xuiiius">XVIIII</w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_38" lemma="murus" lemmaRef="http://lila-erc.eu/data/id/lemma/15074 http://lila-erc.eu/data/id/lemma/113105">murum </w>
+                    <objectName xmlns="" xml:id="objectName_1_8_1_38" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_38" lemma="murus" lemmaRef="http://lila-erc.eu/data/id/lemma/15074 http://lila-erc.eu/data/id/lemma/113105">murum </w>
+                    </objectName>
                     <w xml:id="w_1_8_1_39" lemma="in" lemmaRef="http://lila-erc.eu/data/id/lemma/106748">in </w>
                     <w xml:id="w_1_8_1_40" lemma="altitudo" lemmaRef="http://lila-erc.eu/data/id/lemma/88498">altitudinem </w>
                     <w xml:id="w_1_8_1_41" lemma="pes" lemmaRef="http://lila-erc.eu/data/id/lemma/117499">pedum </w>
                     <w xml:id="w_1_8_1_42" lemma="sedecim" lemmaRef="http://lila-erc.eu/data/id/lemma/124000">sedecim </w>
                     <objectName xmlns="" xml:id="objectName_1_8_1_43">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_43" lemma="fossamque">fossamque </w>
+                        <objectName xml:id="objectName_1_8_1_43" type="PhysicalObjectReference">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_1_43" lemma="fossamque">fossamque </w>
+                        </objectName>
                     </objectName>
                     <w xml:id="w_1_8_1_44" lemma="perduco" lemmaRef="http://lila-erc.eu/data/id/lemma/116747">perducit </w>
                     <w xml:id="w_1_8_1_45" lemma=".">. </w>
@@ -1624,11 +1774,15 @@
                     <w xml:id="w_1_8_2_1" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">Eo</w>
                     <w xml:id="w_1_8_2_2" lemma="opus" lemmaRef="http://lila-erc.eu/data/id/lemma/115170 http://lila-erc.eu/data/id/lemma/16756">opere </w>
                     <w xml:id="w_1_8_2_3" lemma="perfectus" lemmaRef="http://lila-erc.eu/data/id/lemma/120862 http://lila-erc.eu/data/id/hypolemma/32031">perfecto </w>
-                    <w xml:id="w_1_8_2_4" lemma="praesidium" lemmaRef="http://lila-erc.eu/data/id/lemma/119215 http://lila-erc.eu/data/id/lemma/19285">praesidia </w>
+                    <objectName xmlns="" xml:id="objectName_1_8_2_4" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_2_4" lemma="praesidium" lemmaRef="http://lila-erc.eu/data/id/lemma/119215 http://lila-erc.eu/data/id/lemma/19285">praesidia </w>
+                    </objectName>
                     <w xml:id="w_1_8_2_5" lemma="dispono" lemmaRef="http://lila-erc.eu/data/id/lemma/99748">disponit </w>
                     <w xml:id="w_1_8_2_6" lemma=",">, </w>
                     <objectName xmlns="" xml:id="objectName_1_8_2_7">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_2_7" lemma="castella" lemmaRef="http://lila-erc.eu/data/id/lemma/39906">castella </w>
+                        <objectName xml:id="objectName_1_8_2_7" type="PhysicalObjectReference">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_2_7" lemma="castella" lemmaRef="http://lila-erc.eu/data/id/lemma/39906">castella </w>
+                        </objectName>
                     </objectName>
                     <w xml:id="w_1_8_2_8" lemma="communis" lemmaRef="http://lila-erc.eu/data/id/lemma/3687 http://lila-erc.eu/data/id/lemma/42974 http://lila-erc.eu/data/id/lemma/97171">communit </w>
                     <w xml:id="w_1_8_2_9" lemma=",">, </w>
@@ -1646,35 +1800,51 @@
                     <w xml:id="w_1_8_2_21" lemma=".">. </w>
                     <milestone unit="section" n="3"/>
                     <w xml:id="w_1_8_3_1" lemma="ubi" lemmaRef="http://lila-erc.eu/data/id/lemma/129639">Ubi</w>
-                    <w xml:id="w_1_8_3_2" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">ea </w>
-                    <w xml:id="w_1_8_3_3" lemma="dies" lemmaRef="http://lila-erc.eu/data/id/lemma/4908 http://lila-erc.eu/data/id/lemma/99334">dies </w>
+                    <date xmlns="" xml:id="date_1_8_3_2-3" type="date" target="http://datetime.hutime.org/date/1699977.5">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_2" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">ea </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_3" lemma="dies" lemmaRef="http://lila-erc.eu/data/id/lemma/4908 http://lila-erc.eu/data/id/lemma/99334">dies </w>
+                    </date>
                     <w xml:id="w_1_8_3_4" lemma="quam" lemmaRef="http://lila-erc.eu/data/id/lemma/74492">quam </w>
                     <w xml:id="w_1_8_3_5" lemma="constituo" lemmaRef="http://lila-erc.eu/data/id/lemma/96146">constituerat </w>
                     <w xml:id="w_1_8_3_6" lemma="cum" lemmaRef="http://lila-erc.eu/data/id/lemma/97207 http://lila-erc.eu/data/id/lemma/97202 http://lila-erc.eu/data/id/lemma/97201">cum </w>
-                    <w xml:id="w_1_8_3_7" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legatis </w>
+                    <objectName xmlns="" xml:id="objectName_1_8_3_7" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_7" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legatis </w>
+                    </objectName>
                     <w xml:id="w_1_8_3_8" lemma="uenio" lemmaRef="http://lila-erc.eu/data/id/lemma/129790 http://lila-erc.eu/data/id/lemma/84481">uenit </w>
                     <w xml:id="w_1_8_3_9" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
-                    <w xml:id="w_1_8_3_10" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legati </w>
+                    <objectName xmlns="" xml:id="objectName_1_8_3_10" type="ConceptualObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_10" lemma="legatum" lemmaRef="http://lila-erc.eu/data/id/lemma/110179">legati </w>
+                    </objectName>
                     <w xml:id="w_1_8_3_11" lemma="ad" lemmaRef="http://lila-erc.eu/data/id/lemma/87344">ad </w>
-                    <w xml:id="w_1_8_3_12" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eum </w>
+                    <persName xmlns="" xml:id="persName_1_8_3_12" type="PersonReference" target="http://romanrepublic.ac.uk/rdf/entity/Person/1957">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_12" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">eum </w>
+                    </persName>
                     <w xml:id="w_1_8_3_13" lemma="reuertor" lemmaRef="http://lila-erc.eu/data/id/lemma/122808">reuerterunt </w>
                     <w xml:id="w_1_8_3_14" lemma=",">, </w>
                     <w xml:id="w_1_8_3_15" lemma="nego" lemmaRef="http://lila-erc.eu/data/id/lemma/67302 http://lila-erc.eu/data/id/lemma/113553">negat </w>
                     <w xml:id="w_1_8_3_16" lemma="se" lemmaRef="http://lila-erc.eu/data/id/lemma/123932 http://lila-erc.eu/data/id/hypolemma/43031 http://lila-erc.eu/data/id/hypolemma/43567">se </w>
                     <objectName xmlns="" xml:id="objectName_1_8_3_17">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_17" lemma="mos" lemmaRef="http://lila-erc.eu/data/id/lemma/66487 http://lila-erc.eu/data/id/lemma/112831">more </w>
+                        <objectName xml:id="objectName_1_8_3_17" type="ConceptualObjectReference">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_17" lemma="mos" lemmaRef="http://lila-erc.eu/data/id/lemma/66487 http://lila-erc.eu/data/id/lemma/112831">more </w>
+                        </objectName>
                     </objectName>
                     <w xml:id="w_1_8_3_18" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
                     <objectName xmlns="" xml:id="objectName_1_8_3_19">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_19" lemma="exemplum" lemmaRef="http://lila-erc.eu/data/id/lemma/101975">exemplo </w>
+                        <objectName xml:id="objectName_1_8_3_19" type="ConceptualObjectReference">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_19" lemma="exemplum" lemmaRef="http://lila-erc.eu/data/id/lemma/101975">exemplo </w>
+                        </objectName>
                     </objectName>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_20" lemma="populus" lemmaRef="http://lila-erc.eu/data/id/lemma/118463 http://lila-erc.eu/data/id/lemma/118501">populi </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_21" lemma="romanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20302 http://lila-erc.eu/data/id/lemma/77200">Romani</w>
+                    <orgName xmlns="" xml:id="orgName_1_8_3_20-21" type="CommunityReference" target="https://www.wikidata.org/wiki/Q1651392">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_20" lemma="populus" lemmaRef="http://lila-erc.eu/data/id/lemma/118463 http://lila-erc.eu/data/id/lemma/118501">populi </w>
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_21" lemma="romanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20302 http://lila-erc.eu/data/id/lemma/77200">Romani</w>
+                    </orgName>
                     <w xml:id="w_1_8_3_22" lemma="possum" lemmaRef="http://lila-erc.eu/data/id/lemma/118569">posse </w>
                     <w xml:id="w_1_8_3_23" lemma="iter" lemmaRef="http://lila-erc.eu/data/id/lemma/109132">iter </w>
                     <w xml:id="w_1_8_3_24" lemma="ullus" lemmaRef="http://lila-erc.eu/data/id/lemma/130494">ulli </w>
                     <w xml:id="w_1_8_3_25" lemma="per" lemmaRef="http://lila-erc.eu/data/id/lemma/116569">per </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_26" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
+                    <placeName xmlns="" xml:id="placeName_1_8_3_26" type="PlaceReference" target="https://pleiades.stoa.org/places/981537">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_3_26" lemma="prouincia" lemmaRef="http://lila-erc.eu/data/id/lemma/120189">prouinciam </w>
+                    </placeName>
                     <w xml:id="w_1_8_3_27" lemma="do" lemmaRef="http://lila-erc.eu/data/id/lemma/99970">dare </w>
                     <w xml:id="w_1_8_3_28" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
                     <w xml:id="w_1_8_3_29" lemma=",">, </w>
@@ -1687,23 +1857,33 @@
                     <w xml:id="w_1_8_3_36" lemma="ostendo" lemmaRef="http://lila-erc.eu/data/id/lemma/115363">ostendit </w>
                     <w xml:id="w_1_8_3_37" lemma=".">. </w>
                     <milestone unit="section" n="4"/>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_1" lemma="heluetium">Heluetii</w>
+                    <orgName xmlns="" xml:id="orgName_1_8_4_1" type="CommunityReference" target="https://www.wikidata.org/wiki/Q48616">
+                        <orgName xml:id="orgName_1_8_4_1" type="CommunityReference" target="https://www.wikidata.org/wiki/Q48616">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_1" lemma="heluetium">Heluetii</w>
+                        </orgName>
+                    </orgName>
                     <w xml:id="w_1_8_4_2" lemma="is" lemmaRef="http://lila-erc.eu/data/id/lemma/109083">ea </w>
                     <w xml:id="w_1_8_4_3" lemma="spes" lemmaRef="http://lila-erc.eu/data/id/lemma/22087 http://lila-erc.eu/data/id/lemma/125336">spe </w>
                     <w xml:id="w_1_8_4_4" lemma="deiecto" lemmaRef="http://lila-erc.eu/data/id/lemma/98376">deiecti </w>
                     <objectName xmlns="" xml:id="objectName_1_8_4_5">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_5" lemma="nauis" lemmaRef="http://lila-erc.eu/data/id/lemma/113460">nauibus </w>
+                        <objectName xml:id="objectName_1_8_4_5" type="PhysicalObjectReference">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_5" lemma="nauis" lemmaRef="http://lila-erc.eu/data/id/lemma/113460">nauibus </w>
+                        </objectName>
                     </objectName>
                     <w xml:id="w_1_8_4_6" lemma="iungo" lemmaRef="http://lila-erc.eu/data/id/lemma/109224">iunctis </w>
                     <objectName xmlns="" xml:id="objectName_1_8_4_7">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_7" lemma="ratio" lemmaRef="http://lila-erc.eu/data/id/lemma/121458">ratibusque </w>
+                        <objectName xml:id="objectName_1_8_4_7" type="PhysicalObjectReference">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_7" lemma="ratio" lemmaRef="http://lila-erc.eu/data/id/lemma/121458">ratibusque </w>
+                        </objectName>
                     </objectName>
                     <w xml:id="w_1_8_4_8" lemma="complur">compluribus </w>
                     <w xml:id="w_1_8_4_9" lemma="facio" lemmaRef="http://lila-erc.eu/data/id/lemma/102758 http://lila-erc.eu/data/id/lemma/51124">factis </w>
                     <w xml:id="w_1_8_4_10" lemma=",">, </w>
                     <w xml:id="w_1_8_4_11" lemma="alius" lemmaRef="http://lila-erc.eu/data/id/lemma/88481">alii </w>
                     <w xml:id="w_1_8_4_12" lemma="uas" lemmaRef="http://lila-erc.eu/data/id/lemma/129602 http://lila-erc.eu/data/id/lemma/129594">uadis </w>
-                    <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_13" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodani</w>
+                    <placeName xmlns="" xml:id="placeName_1_8_4_13" type="PlaceReference" target="https://pleiades.stoa.org/places/148168">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_13" lemma="rhodanus" lemmaRef="http://lila-erc.eu/data/id/lemma/20178">Rhodani</w>
+                    </placeName>
                     <w xml:id="w_1_8_4_14" lemma=",">, </w>
                     <w xml:id="w_1_8_4_15" lemma="qui" lemmaRef="http://lila-erc.eu/data/id/lemma/121354">qua </w>
                     <w xml:id="w_1_8_4_16" lemma="paruus" lemmaRef="http://lila-erc.eu/data/id/lemma/116136">minima </w>
@@ -1725,10 +1905,14 @@
                     <w xml:id="w_1_8_4_32" lemma=",">, </w>
                     <w xml:id="w_1_8_4_33" lemma="opus" lemmaRef="http://lila-erc.eu/data/id/lemma/115170 http://lila-erc.eu/data/id/lemma/16756">operis </w>
                     <objectName xmlns="" xml:id="objectName_1_8_4_34">
-                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_34" lemma="munitio" lemmaRef="http://lila-erc.eu/data/id/lemma/113055">munitione </w>
+                        <objectName xml:id="objectName_1_8_4_34" type="PhysicalObjectReference">
+                            <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_34" lemma="munitio" lemmaRef="http://lila-erc.eu/data/id/lemma/113055">munitione </w>
+                        </objectName>
                     </objectName>
                     <w xml:id="w_1_8_4_35" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
-                    <w xml:id="w_1_8_4_36" lemma="miles" lemmaRef="http://lila-erc.eu/data/id/lemma/14557 http://lila-erc.eu/data/id/lemma/112318">militum </w>
+                    <objectName xmlns="" xml:id="objectName_1_8_4_36" type="PhysicalObjectReference">
+                        <w xmlns="http://www.tei-c.org/ns/1.0" xml:id="w_1_8_4_36" lemma="miles" lemmaRef="http://lila-erc.eu/data/id/lemma/14557 http://lila-erc.eu/data/id/lemma/112318">militum </w>
+                    </objectName>
                     <w xml:id="w_1_8_4_37" lemma="concursus" lemmaRef="http://lila-erc.eu/data/id/lemma/97718 http://lila-erc.eu/data/id/hypolemma/8395">concursu </w>
                     <w xml:id="w_1_8_4_38" lemma="et" lemmaRef="http://lila-erc.eu/data/id/lemma/101541 http://lila-erc.eu/data/id/lemma/101542">et </w>
                     <w xml:id="w_1_8_4_39" lemma="teles" lemmaRef="http://lila-erc.eu/data/id/lemma/132294">telis </w>
