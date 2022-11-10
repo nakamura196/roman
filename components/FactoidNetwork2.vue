@@ -534,12 +534,12 @@ export default {
       const aoConfig = {
         'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#ConceptualObjectReference':
           {
-            color: 'pink',
+            color: 'purple',
             // shape: 'box',
           },
         'https://junjun7613.github.io/RomanFactoid_v2/Roman_Contextual_Factoid.owl#PhysicalObjectReference':
           {
-            color: 'gray',
+            color: '#CBC3E3',
             // shape: 'diamond',
           },
       }

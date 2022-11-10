@@ -23,6 +23,9 @@ env.endpoint = "https://ogawa.aws.ldas.jp/sparql" // 'https://dydra.com/junjun76
 env.tei_url = env.BASE_URL + "/xml/xml_ogawa.xml"
 
 export default {
+  server: {
+    port: 8000, // デフォルト: 3000
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: false,
